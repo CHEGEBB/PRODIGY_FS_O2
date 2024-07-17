@@ -1,68 +1,76 @@
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { fab } from "@fortawesome/free-brands-svg-icons";
-import { faUser, faLock, faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "../sass/SignUp.scss";
+import React, { useState } from 'react';
+import '../sass/SignUp.scss';
 
-library.add(fab, faUser, faLock, faEnvelope);
+const SignUpPage = () => {
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-const SignUp = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission
+  };
+
   return (
-    <div className="container">
-      <div className="forms-container">
-        <div className="signin-signup">
-          <form className="sign-in-form">
-            <h1>Sign Up</h1>
-            <div className="input-container">
-              <FontAwesomeIcon icon="user" className="icon" />
-              <input type="text" placeholder="Username" />
-            </div>
-            <div className="input-container">
-              <FontAwesomeIcon icon="envelope" className="icon" />
-              <input type="email" placeholder="Email" />
-            </div>
-            <div className="input-container">
-              <FontAwesomeIcon icon="lock" className="icon" />
-              <input type="password" placeholder="Password" />
-            </div>
-            <div className="input-container">
-              <FontAwesomeIcon icon="lock" className="icon" />
-              <input type="password" placeholder="Confirm Password" />
-            </div>
+    <div className="container-login">
+      <div className="forms-container-login">
+        <form className="sign-in-form" onSubmit={handleSubmit}>
+          <h1>Sign Up</h1>
+          <div className="input-container-login">
+            <i className="fas fa-user icon"></i>
+            <input
+              type="text"
+              placeholder="Username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+          </div>
+          <div className="input-container-login">
+            <i className="fas fa-envelope icon"></i>
+            <input
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+          <div className="input-container-login">
+            <i className="fas fa-lock icon"></i>
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+          <div className="button-container">
             <button type="submit">Sign Up</button>
-            <div className="socials-container">
-              <div className="social-icons">
-                <a
-                  href="https://www.instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FontAwesomeIcon icon={["fab", "instagram"]} size="2x" />
-                </a>
-                <a
-                  href="https://www.facebook.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FontAwesomeIcon icon={["fab", "facebook"]} size="2x" />
-                </a>
-                <a
-                  href="https://www.twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FontAwesomeIcon icon={["fab", "twitter"]} size="2x" />
-                </a>
-              </div>
+          </div>
+          <div className="exist">
+            <p>Already have an account? Sign In</p>
+          </div>
+          <div className="socials-container-login">
+            <div className="social-icons">
+              <a href="#"><i className="fab fa-facebook-f"></i></a>
+              <a href="#"><i className="fab fa-twitter"></i></a>
+              <a href="#"><i className="fab fa-google"></i></a>
             </div>
-          </form>
+          </div>
+        </form>
+      </div>
+      <div className="panels-container">
+        <div className="left-panel">
+          <div className="panel">
+            <div className="content">
+              <h3>New here?</h3>
+              <p>Enter your personal details and start journey with us</p>
+              <button>Sign Up</button>
+            </div>
+          </div>
         </div>
       </div>
-      <p>
-        Already have an account? <a href="login">Login</a>
-      </p>
     </div>
   );
 };
 
-export default SignUp;
+export default SignUpPage;

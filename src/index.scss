@@ -3,7 +3,43 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+$color-primary: #3f51b5;
+$color-secondary: #f44336;
+$color-text: #ffffff;
+$color-background: #212121;
+$color-surface: #37474f;
+$color-surface-light: #455a64;
+$color-surface-dark: #263238;
+$color-surface-accent: #ff9800;
+$color-surface-accent-light: #ffca28;
+$color-surface-accent-dark: #c62828;
+$color-surface-error: #f44336;
+$color-surface-error-light: #ef5350;
+$color-surface-error-dark: #b71c1c;
+$color-surface-warning: #ffeb3b;
+$color-surface-warning-light: #fdd835;
+$color-surface-warning-dark: #c67628;
+$color-surface-info: #2196f3;
 
+$font-rubik: 'Rubik', sans-serif;
+$font-poppins: 'Poppins', sans-serif;
+$font-open-sans: 'Open Sans', sans-serif;
+$font-jost: 'Jost', sans-serif;
+$font-outfit: 'Outfit', sans-serif;
+$font-ropa-sans: 'Ropa Sans', sans-serif;
+
+$heading-size: 2.5rem;
+$body-size: 1.5rem;
+$heading-weight: 700;
+$body-weight: 400;
+$button-size: 1.2rem;
+$button-weight: 500;
+$input-size: 1.5rem;
+$input-weight: 400;
+$link-size: 1.5rem;
+$link-weight: 500;
+$transition: background-color 0.3s ease, color 0.3s ease;
+$shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
 *{
   margin: 0;
   padding: 0;
