@@ -1,72 +1,108 @@
-:root{
-    --color-primary: #3f51b5;
-    --color-secondary: #f44336;
-    --color-text: #ffffff;
-    --color-background: #212121;
-    --color-surface: #37474f;
-    --color-surface-light: #455a64;
-    --color-surface-dark: #263238;
-    --color-surface-accent: #ff9800;
-    --color-surface-accent-light: #ffca28;
-    --color-surface-accent-dark: #c62828;
-    --color-surface-error: #f44336;
-    --color-surface-error-light: #ef5350;
-    --color-surface-error-dark: #b71c1c;
-    --color-surface-warning: #ffeb3b;
-    --color-surface-warning-light: #fdd835;
-    --color-surface-warning-dark: #c67628;
-    --color-surface-info: #2196f3;
-    --primary-font: 'Rubik', sans-serif;
-    --primary-font2: 'Poppins', sans-serif;
-    --secondary-font: 'Open Sans', sans-serif;
-    --title-font: 'Jost', sans-serif;
-    --heading-font: 'Outfit', sans-serif;
-    --body-font: 'Ropa Sans', sans-serif;
-    --button-font: 'Rubik', sans-serif;
-    --input-font: 'Open Sans', sans-serif;
-    --link-font: 'Rubik', sans-serif;
-    --heading-size: 2.5rem;
-    --body-size: 1.5rem;
-    --heading-weight: 700;
-    --body-weight: 400;
-    --button-size: 1.2rem;
-    --button-weight: 500;
-    --input-size: 1.5rem;
-    --input-weight: 400;
-    --link-size: 1.5rem;
-    --link-weight: 500;
-    --transition: background-color 0.3s ease, color 0.3s ease;
-    --shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-  }
-  .container{
-    position: relative;
-    width: 100%;
-    min-height:100vh;
-    background-color: fff;
-    overflow: hidden;
-.signup-container{
-  h1{
-    font-size: var(--heading-size);
-    font-weight: var(--heading-weight);
-    margin-bottom: 1rem;
-  }
-  input{
-    font-family: var(--primary-font2);
-  }
-  .forms-container{
+$color-primary: #3f51b5;
+$color-secondary: #f44336;
+$color-text: #ffffff;
+$color-background: #212121;
+$color-surface: #37474f;
+$color-surface-light: #455a64;
+$color-surface-dark: #263238;
+$color-surface-accent: #ff9800;
+$color-surface-accent-light: #ffca28;
+$color-surface-accent-dark: #c62828;
+$color-surface-error: #f44336;
+$color-surface-error-light: #ef5350;
+$color-surface-error-dark: #b71c1c;
+$color-surface-warning: #ffeb3b;
+$color-surface-warning-light: #fdd835;
+$color-surface-warning-dark: #c67628;
+$color-surface-info: #2196f3;
+
+$font-rubik: 'Rubik', sans-serif;
+$font-poppins: 'Poppins', sans-serif;
+$font-open-sans: 'Open Sans', sans-serif;
+$font-jost: 'Jost', sans-serif;
+$font-outfit: 'Outfit', sans-serif;
+$font-ropa-sans: 'Ropa Sans', sans-serif;
+
+$heading-size: 2.5rem;
+$body-size: 1.5rem;
+$heading-weight: 700;
+$body-weight: 400;
+$button-size: 1.2rem;
+$button-weight: 500;
+$input-size: 1.5rem;
+$input-weight: 400;
+$link-size: 1.5rem;
+$link-weight: 500;
+$transition: background-color 0.3s ease, color 0.3s ease;
+$shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-poppins;
+  color: $color-text;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+
+  .forms-container {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    background-color: #2196f3;
-    padding: 20px;
-}
-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-}
+
+    form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      .input-container {
+        position: relative;
+        width: 100%;
+        max-width: 380px;
+        margin: 10px 0;
+
+        .icon {
+          position: absolute;
+          top: 50%;
+          left: 15px;
+          transform: translateY(-50%);
+          color: $color-text;
+        }
+
+        input {
+          font-family: $font-poppins;
+          width: 100%;
+          height: 55px;
+          padding: 10px 10px 10px 40px; 
+          border-radius: 55px;
+          border: none;
+          background-color: $color-primary;
+          color:#333;
+          ::placeholder {
+            color: $color-text;
+            font-family: $font-poppins;
+          }
+        }
+      }
+
+      h1 {
+        margin: 1rem 0;
+        font-size: $heading-size;
+        font-weight: $heading-weight;
+        color: $color-background;
+        font-family: $font-poppins;
+      }
+    }
+  }
 }
