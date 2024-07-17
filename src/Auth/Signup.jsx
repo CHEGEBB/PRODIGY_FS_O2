@@ -7,8 +7,10 @@ library.add(fab);
 
 const SignUp = () => {
   return (
+    <div className="container">
     <div className="signup-container">
       <h1>Sign Up</h1>
+      <div className="forms-container">
       <form>
         <input type="text" placeholder="Username" />
         <input type="email" placeholder="Email" />
@@ -41,9 +43,11 @@ const SignUp = () => {
           </div>
         </div>
       </form>
+      </div>
       <p>
         Already have an account? <a href="login">Login</a>
       </p>
+    </div>
     </div>
   );
 };
