@@ -17,7 +17,7 @@ const SignUp = () => {
               <FontAwesomeIcon icon="user" className="icon" />
               <input type="text" placeholder="Username" />
             </div>
-            <div className="input-container ">
+            <div className="input-container">
               <FontAwesomeIcon icon="envelope" className="icon" />
               <input type="email" placeholder="Email" />
             </div>
