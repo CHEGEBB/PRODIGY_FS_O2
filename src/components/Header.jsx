@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBell } from "@fortawesome/free-solid-svg-icons/faBell";
 const Header = () => {
     return ( 
-        <div className="header">
+        <div className="header-container">
             <div className="header-left">
                 <h1>Employee Management System</h1>
             </div>
