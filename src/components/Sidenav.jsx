@@ -17,7 +17,8 @@ import {
   faUserEdit,
   faProjectDiagram,
   faFolderPlus,
-  faEdit
+  faEdit,
+  faCog
 } from '@fortawesome/free-solid-svg-icons';
 import '../sass/Sidenav.scss';
 import DummyAdmin from "../images/domnic-harris.png"
@@ -119,6 +120,10 @@ const Sidenav = ({ collapsed, toggleSidebar }) => {
         <Link to="/leavemanagement" className="nav-item">
           <FontAwesomeIcon icon={faDoorOpen} className="nav-icon" />
           <span className="nav-label">Leave Management</span>
+        </Link>
+        <Link to="/settings" className="nav-item">
+          <FontAwesomeIcon icon={faCog} className="nav-icon" />
+          <span className="nav-label">Settings</span>
         </Link>
         <Link to="/" className="nav-item">
           <FontAwesomeIcon icon={faChevronLeft} className="nav-icon" />

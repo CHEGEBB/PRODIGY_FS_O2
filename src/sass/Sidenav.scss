@@ -1,13 +1,48 @@
+$font-rubik: 'Rubik', sans-serif;
+$font-poppins: 'Poppins', sans-serif;
+$font-open-sans: 'Open Sans', sans-serif;
+$font-jost: 'Jost', sans-serif;
+$font-outfit: 'Outfit', sans-serif;
+$font-ropa-sans: 'Ropa Sans', sans-serif;
+$color-vivid-cyan: #00E5FF;
+$color-electric-lime: #CCFF00;
+$color-hot-pink: #FF1493;
+$color-neon-orange: #FF6600;
+$color-bright-yellow: #FFFF00;
+$color-gradient-start: #6A11CB;
+$color-gradient-end: #2575FC;
+$color-accent-coral: #FF6B6B;
+$color-accent-teal: #4ECDC4;
+$color-accent-marigold: #FFBE0B;
+$color-cosmic-blue: #2E2D88;
+$color-nebula-purple: #8A2BE2;
+$color-galaxy-indigo: #4B0082;
+$color-starlight-silver: #E6E8FA;
+$color-aurora-green: #00FF7F;
+$color-charcoal-slate: #36454F;
+$color-pewter-gray: #708090;
+$color-steel-blue: #4682B4;
+$color-slate-gray: #708090;
+$color-gunmetal: #2C3539;
+$pastel-white-1: #F9F9F9;
+$pastel-white-2: #F5F5F5;
+$pastel-white-3: #F0F0F0;
+$pastel-white-4: #ECECEC;
+$pastel-white-5: #E8E8E8;
+$bluish-white-1: #F0F8FF;  // Alice Blue
+$bluish-white-2: #E6F2FF;  // Light Bluish White
+$bluish-white-3: #E0FFFF;  // Light Cyan
+$bluish-white-4: #F0FFFF;  // Azure
+$bluish-white-5: #EBF4FA; 
 .sidenav {
     width: 250px;
     height: 100vh;
-    background-color: #2c3e50;
-    color: white;
+    background-color:  #1492a3 ;
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
-    overflow-y: auto;
     overflow-x: hidden;
+    color: $bluish-white-1;
   
     &.collapsed {
       width: 90px;
@@ -117,6 +152,7 @@
       display: flex;
       flex-direction: column;
       gap: 15px;
+      font-family: $font-rubik;
       
     }
   
@@ -125,17 +161,19 @@
       align-items: center;
       padding: 10px 20px;
       text-decoration: none;
-      color: white;
+      color: $color-starlight-silver;
       transition: all 0.3s ease;
       cursor: pointer;
   
       &:hover {
-        background-color: #34495e;
+        background-color:$color-steel-blue;
         transform: translateX(5px);
+        border-left: 2px solid $color-hot-pink;
+        width: 100%;
       }
   
       &.active {
-        background-color: #34495e;
+        background-color: $color-vivid-cyan;
       }
   
       .nav-icon {
@@ -162,14 +200,16 @@
       flex-wrap: wrap;
   
       &.active {
-        background-color: #34495e;
+        background-color: rgba(0, 0, 0, 0.3);
+        color: $color-accent-coral;
+        border-right: 3px solid #6A11CB;
   
         .submenu-icon {
           transform: rotate(-90deg);
         }
   
         & + .submenu {
-          max-height: 300px; // Adjust this value as needed
+          max-height: 300px; 
           opacity: 1;
         }
       }
@@ -182,13 +222,15 @@
       max-height: 0;
       opacity: 0;
       transition: max-height 0.3s ease, opacity 0.3s ease;
+      font-family: $font-rubik;
+      font-size: 14px;
   
       .submenu-item {
         display: flex;
         align-items: center;
         padding: 8px 10px;
         text-decoration: none;
-        color: #bdc3c7;
+        color: $color-starlight-silver;
         transition: all 0.3s ease;
   
         &:hover {
@@ -210,10 +252,12 @@
       cursor: pointer;
       background-color: #34495e;
       transition: all 0.3s ease;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: $color-accent-coral;
+      border-right: 3px solid #6A11CB;
   
       &:hover {
         background-color: #2c3e50;
-        transform: scale(1.1);
       }
     }
   }

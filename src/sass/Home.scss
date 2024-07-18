@@ -1,25 +1,30 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
 .home-container {
-    background-color: aqua;
-    padding: 20px;
-    transition: all 0.3s ease;
-  
-    h1 {
-      margin-bottom: 20px;
-    }
-  
-    p {
-      font-size: 16px;
-      line-height: 1.5;
-    }
+  background-color: aqua;
+  padding: 20px;
+  transition: all 0.3s ease;
+
+  h1 {
+    margin-bottom: 20px;
   }
-  
+
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
   @media (min-width: 1280px) and (max-width: 1920px) {
-    .home-container {
-      max-width: calc(100% - 250px);
-      margin-left: auto;
-    }
-  
-    .sidebar-collapsed .home-container {
-      max-width: calc(100% - 60px);
+    width: calc(100% - 250px);
+    margin-left: auto;
+    margin-right: auto;
+
+    .sidebar-collapsed & {
+      width: calc(100% - 60px);
     }
   }
+}
