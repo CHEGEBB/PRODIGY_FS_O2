@@ -1,10 +1,64 @@
+$font-rubik: 'Rubik', sans-serif;
+$font-poppins: 'Poppins', sans-serif;
+$font-open-sans: 'Open Sans', sans-serif;
+$font-jost: 'Jost', sans-serif;
+$font-outfit: 'Outfit', sans-serif;
+$font-ropa-sans: 'Ropa Sans', sans-serif;
+$color-vivid-cyan: #00E5FF;
+$color-electric-lime: #CCFF00;
+$color-hot-pink: #FF1493;
+$color-neon-orange: #FF6600;
+$color-bright-yellow: #FFFF00;
+$color-gradient-start: #6A11CB;
+$color-gradient-end: #2575FC;
+$color-accent-coral: #FF6B6B;
+$color-accent-teal: #4ECDC4;
+$color-accent-marigold: #FFBE0B;
+$color-cosmic-blue: #2E2D88;
+$color-nebula-purple: #8A2BE2;
+$color-galaxy-indigo: #4B0082;
+$color-starlight-silver: #E6E8FA;
+$color-aurora-green: #00FF7F;
 .header-container{
-    background-color: red;
+    background-color: #333;
     padding: 20px;
     transition: all 0.3s ease;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: $font-rubik;
+    color: #fff;
+    .dash{
+        margin-right: 10px;
+        color: #fff;
+        font-size: 18px;
+        font-family: $font-rubik;
+
+    }
+    .inform{
+        color: #fff;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 60px;
+        .icon a{
+            width: 60px;
+            color: red;
+        }
+        p{
+            margin-right: 10px;
+            font-size: 14px;
+            font-family: $font-rubik;
+            display: none;
+        }
+        .toggle-sidebar {
+            cursor: pointer;
+        }
+    }
     
     h1 {
         margin-bottom: 20px;
