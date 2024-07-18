@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDashboard, faUserGroup, faChevronLeft, faChevronRight,faBriefcase,faCalendar,faDoorOpen } from '@fortawesome/free-solid-svg-icons';
+import { faDashboard, faUserGroup, faChevronLeft, faChevronRight,faBriefcase,faCalendar,faDoorOpen,faBell,faSearch,faMessage } from '@fortawesome/free-solid-svg-icons';
 import '../sass/Sidenav.scss';
+import DummyAdmin from "../images/domnic-harris.png"
 
 const Sidenav = ({ collapsed, toggleSidebar }) => {
   return (
@@ -12,12 +13,30 @@ const Sidenav = ({ collapsed, toggleSidebar }) => {
         <h1>Worksphere</h1>
     </div>
     <div className="admin-profile">
-      <img src="https://via.placeholder.com/150" alt="Admin" />
+      <img src={DummyAdmin} alt="Admin" />
       <div className="admin-name">
         <h3>Admin</h3>
         <p>User Role</p>
       </div>
     </div>
+    <div className="alerts">
+      <div className="notifications">
+          <div className="notification-icon">
+            <FontAwesomeIcon icon={faBell} />
+          </div>
+      </div>
+      <div className="search">
+        <div className="search-icon">
+          <FontAwesomeIcon icon={faSearch} />
+        </div>
+      </div>
+      <div className="messages">
+        <div className="message-icon">
+          <FontAwesomeIcon icon={faMessage} />
+          </div>
+      </div>
+    </div>
+    <hr></hr>
     </div>
       <div className="nav-items">
         <div className="nav-item">

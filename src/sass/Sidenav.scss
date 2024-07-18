@@ -6,15 +6,33 @@
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 50px;
     .top{
-        margin: 0 auto;
-        .admin-name{
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            font-weight: 600;
-            text-align: center;
+        margin: 10px;
+        .admin-profile{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .admin-name{
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+                font-weight: 600;
+                text-align: center;
+            }
         }
+        .alerts{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        
   
     }
   
