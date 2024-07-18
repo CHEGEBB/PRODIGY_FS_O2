@@ -36,7 +36,8 @@ $color-aurora-green: #00FF7F;
         color: #fff;
         font-size: 18px;
         font-family: $font-rubik;
-
+        display: flex;
+        flex-direction: row;
     }
     .inform{
         color: #fff;
