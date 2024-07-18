@@ -1,8 +1,10 @@
 .header-container{
-    background-color: #fff;
+    background-color: red;
     padding: 20px;
     transition: all 0.3s ease;
-    width: 4000px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     
     h1 {
         margin-bottom: 20px;
@@ -12,14 +14,24 @@
         font-size: 16px;
         line-height: 1.5;
     }
+   
+  @media (min-width: 1280px){
+    width: calc(1280px - 250px);
+    margin-left: -20px;
+    margin-top: -20px;
     
-    @media (min-width: 1280px) and (max-width: 1920px) {
-        width: calc(1920px - 250px);
-        margin-left: auto;
-        margin-right: auto;
-    
-        .sidebar-collapsed & {
-        width: calc(100% - 60px);
-        }
+    .sidebar-collapsed & {
+        width: calc(1280px + 60px);
+      }
+
+  }
+  @media (min-width: 1920px){
+    width: calc(1920px - 250px);
+    margin-left: -20px;
+    margin-top: -20px;
+
+    .sidebar-collapsed & {
+      width: calc(100% - 90px);
     }
+  }
 }

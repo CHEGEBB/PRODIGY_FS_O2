@@ -1,14 +1,11 @@
-*{
+
+.home-container {
+  padding: 20px;
+  transition: all 0.3s ease;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
-}
-.home-container {
-  background-color: aqua;
-  padding: 20px;
-  transition: all 0.3s ease;
-  width: 4000px;
 
   h1 {
     margin-bottom: 20px;
@@ -19,7 +16,12 @@
     line-height: 1.5;
   }
 
-  @media (min-width: 1280px) and (max-width: 1920px) {
+  @media (min-width: 1280px){
+    width: calc(1280px - 250px);
+    margin: 0;
+
+  }
+  @media (min-width: 1920px){
     width: calc(1920px - 250px);
     margin: 0;
 
