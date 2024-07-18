@@ -1,13 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDashboard, faUserGroup, faChevronLeft, faChevronRight, faBriefcase, faCalendar, faDoorOpen, faBell, faSearch, faMessage } from '@fortawesome/free-solid-svg-icons';
+import { 
+  faDashboard, 
+  faUserGroup, 
+  faChevronLeft, 
+  faChevronRight, 
+  faBriefcase, 
+  faCalendar, 
+  faDoorOpen, 
+  faBell, 
+  faSearch, 
+  faMessage,
+  faUsers,
+  faUserPlus,
+  faUserEdit,
+  faProjectDiagram,
+  faFolderPlus,
+  faEdit
+} from '@fortawesome/free-solid-svg-icons';
 import '../sass/Sidenav.scss';
 import DummyAdmin from "../images/domnic-harris.png"
 import animationData from "../images/logo.json"
 import Lottie from 'lottie-react';
 
 const Sidenav = ({ collapsed, toggleSidebar }) => {
+  const [activeSubmenu, setActiveSubmenu] = useState(null);
+
+  const toggleSubmenu = (submenu) => {
+    setActiveSubmenu(activeSubmenu === submenu ? null : submenu);
+  };
+
   return (
     <div className={`sidenav ${collapsed ? 'collapsed' : ''}`}>
       <div className="top">
@@ -47,14 +70,48 @@ const Sidenav = ({ collapsed, toggleSidebar }) => {
           <FontAwesomeIcon icon={faDashboard} className="nav-icon" />
           <span className="nav-label">Dashboard</span>
         </Link>
-        <Link to="/employees" className="nav-item">
+        <div className={`nav-item has-submenu ${activeSubmenu === 'employees' ? 'active' : ''}`} onClick={() => toggleSubmenu('employees')}>
           <FontAwesomeIcon icon={faUserGroup} className="nav-icon" />
           <span className="nav-label">Employees</span>
-        </Link>
-        <Link to="/projects" className="nav-item">
+          <FontAwesomeIcon icon={activeSubmenu === 'employees' ? faChevronLeft : faChevronRight} className="submenu-icon" />
+        </div>
+        {activeSubmenu === 'employees' && (
+          <div className="submenu">
+            <Link to="/employees" className="submenu-item">
+              <FontAwesomeIcon icon={faUsers} className="submenu-icon" />
+              <span>All Employees</span>
+            </Link>
+            <Link to="/employees/add" className="submenu-item">
+              <FontAwesomeIcon icon={faUserPlus} className="submenu-icon" />
+              <span>Add Employee</span>
+            </Link>
+            <Link to="/employees/edit" className="submenu-item">
+              <FontAwesomeIcon icon={faUserEdit} className="submenu-icon" />
+              <span>Edit Employee</span>
+            </Link>
+          </div>
+        )}
+        <div className={`nav-item has-submenu ${activeSubmenu === 'projects' ? 'active' : ''}`} onClick={() => toggleSubmenu('projects')}>
           <FontAwesomeIcon icon={faBriefcase} className="nav-icon" />
           <span className="nav-label">Projects</span>
-        </Link>
+          <FontAwesomeIcon icon={activeSubmenu === 'projects' ? faChevronLeft : faChevronRight} className="submenu-icon" />
+        </div>
+        {activeSubmenu === 'projects' && (
+          <div className="submenu">
+            <Link to="/projects" className="submenu-item">
+              <FontAwesomeIcon icon={faProjectDiagram} className="submenu-icon" />
+              <span>All Projects</span>
+            </Link>
+            <Link to="/projects/add" className="submenu-item">
+              <FontAwesomeIcon icon={faFolderPlus} className="submenu-icon" />
+              <span>Add Project</span>
+            </Link>
+            <Link to="/projects/edit" className="submenu-item">
+              <FontAwesomeIcon icon={faEdit} className="submenu-icon" />
+              <span>Edit Project</span>
+            </Link>
+          </div>
+        )}
         <Link to="/attendance" className="nav-item">
           <FontAwesomeIcon icon={faCalendar} className="nav-icon" />
           <span className="nav-label">Attendance</span>
