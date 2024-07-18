@@ -1,3 +1,4 @@
+import "../sass/Home.scss";
 const HomePage = () => {
     return ( 
         <div className="home-container">

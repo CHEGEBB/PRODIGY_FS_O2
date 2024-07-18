@@ -20,11 +20,11 @@ const AuthenticationPages = () => {
           <form action="#" className="sign-in-form">
             <h2 className="title">Sign in</h2>
             <div className="input-field">
-              <FontAwesomeIcon icon={faUser} />
+              <FontAwesomeIcon icon={faUser} className='usercon' />
               <input type="text" placeholder="Username" />
             </div>
             <div className="input-field">
-              <FontAwesomeIcon icon={faLock} />
+              <FontAwesomeIcon icon={faLock} className='lockcon' />
               <input type="password" placeholder="Password" />
             </div>
             <input type="submit" value="Login" className="btn solid" />
@@ -44,15 +44,15 @@ const AuthenticationPages = () => {
           <form action="#" className="sign-up-form">
             <h2 className="title">Sign up</h2>
             <div className="input-field">
-              <FontAwesomeIcon icon={faUser} />
+              <FontAwesomeIcon icon={faUser} className='usercon' />
               <input type="text" placeholder="Username" />
             </div>
             <div className="input-field">
-              <FontAwesomeIcon icon={faEnvelope} />
-              <input type="email" placeholder="Email" />
+              <FontAwesomeIcon icon={faEnvelope} className='envelopcon'/>
+              <input type="email" placeholder="Email" className='input-div bg-slate-500' />
             </div>
             <div className="input-field">
-              <FontAwesomeIcon icon={faLock} />
+              <FontAwesomeIcon icon={faLock} className='lockcon' />
               <input type="password" placeholder="Password" />
             </div>
             <input type="submit" className="btn" value="Sign up" />

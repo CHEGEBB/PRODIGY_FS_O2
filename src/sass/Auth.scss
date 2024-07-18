@@ -49,6 +49,18 @@ $color-brushed-bronze: #CD7F32;
 $color-rose-gold: #B76E79;
 $color-platinum: #E5E4E2;
 
+// Pastel and White Colors
+$pastel-white-1: #F9F9F9;
+$pastel-white-2: #F5F5F5;
+$pastel-white-3: #F0F0F0;
+$pastel-white-4: #ECECEC;
+$pastel-white-5: #E8E8E8;
+$bluish-white-1: #F0F8FF;  // Alice Blue
+$bluish-white-2: #E6F2FF;  // Light Bluish White
+$bluish-white-3: #E0FFFF;  // Light Cyan
+$bluish-white-4: #F0FFFF;  // Azure
+$bluish-white-5: #EBF4FA; 
+
 // Gradient Base Colors
 $color-gradient-start: #6A11CB;
 $color-gradient-end: #2575FC;
@@ -77,15 +89,27 @@ $link-size: 1.5rem;
 $link-weight: 500;
 $transition: background-color 0.3s ease, color 0.3s ease;
 $shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+
+@mixin icon-styles {
+  padding: 20px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body,
-input {
+body {
   font-family: "Poppins", sans-serif;
+}
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .container {
@@ -144,16 +168,17 @@ form.sign-in-form {
 }
 
 .input-field {
-  max-width: 380px;
-  width: 100%;
-  background-color: #f0f0f0;
-  margin: 10px 0;
-  height: 55px;
-  border-radius: 55px;
-  display: grid;
-  grid-template-columns: 15% 85%;
-  padding: 0 0.4rem;
-  position: relative;
+  display: flex;
+  flex-direction: row;
+  .usercon {
+    @include icon-styles;
+  }
+  .envelopcon {
+    @include icon-styles;
+  }
+  .lockcon {
+    @include icon-styles;
+  }
 }
 
 .input-field i {
@@ -164,14 +189,28 @@ form.sign-in-form {
   font-size: 1.1rem;
 }
 
-.input-field input {
+.input-field input[type="email"],
+.input-field input[type="password"],
+.input-field input[type="text"] {
   background: none;
   outline: none;
+  background-color: $bluish-white-2 !important;
+  width: 400px !important;
   border: none;
   line-height: 1;
   font-weight: 600;
   font-size: 1.1rem;
   color: #333;
+  font-family: $font-outfit;
+  width: 100%;
+  background-color: #f0f0f0;
+  margin: 10px 0;
+  height: 55px;
+  border-radius: 55px;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  padding: 10px;
+  position: relative;
 }
 
 .input-field input::placeholder {
@@ -211,7 +250,7 @@ form.sign-in-form {
 
 .btn {
   width: 150px;
-  background-color: #5995fd;
+  background-color: $color-accent-teal;
   border: none;
   outline: none;
   height: 49px;
@@ -227,6 +266,7 @@ form.sign-in-form {
 .btn:hover {
   background-color: #4d84e2;
 }
+
 .panels-container {
   position: absolute;
   height: 100%;
@@ -473,5 +513,113 @@ form.sign-in-form {
   .container.sign-up-mode:before {
     bottom: 28%;
     left: 50%;
+  }
+}
+@media (min-width: 1366px) {
+  .container {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  .signin-signup {
+    width: 60%;
+    left: 70%;
+  }
+
+  .panels-container {
+    grid-template-columns: 45% 55%;
+  }
+
+  .panel .content {
+    padding: 0 10%;
+  }
+
+  .image {
+    width: 80%;
+    max-width: 500px;
+  }
+
+  .input-field input[type="email"],
+  .input-field input[type="password"],
+  .input-field input[type="text"] {
+    width: 450px !important;
+  }
+
+  .btn {
+    width: 180px;
+    height: 55px;
+    font-size: 1.1rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .panel h3 {
+    font-size: 1.8rem;
+  }
+
+  .panel p {
+    font-size: 1.1rem;
+  }
+
+  .container:before {
+    width: 2500px;
+    height: 2500px;
+    right: 46%;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1800px;
+  }
+
+  .signin-signup {
+    width: 50%;
+    left: 75%;
+  }
+
+  .panels-container {
+    grid-template-columns: 40% 60%;
+  }
+
+  .panel .content {
+    padding: 0 15%;
+  }
+
+  .image {
+    width: 70%;
+    max-width: 600px;
+  }
+
+  .input-field input[type="email"],
+  .input-field input[type="password"],
+  .input-field input[type="text"] {
+    width: 500px !important;
+  }
+
+  .btn {
+    width: 200px;
+    height: 60px;
+    font-size: 1.2rem;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .panel h3 {
+    font-size: 2.2rem;
+  }
+
+  .panel p {
+    font-size: 1.3rem;
+  }
+
+  .container:before {
+    width: 3000px;
+    height: 3000px;
+    right: 44%;
   }
 }
