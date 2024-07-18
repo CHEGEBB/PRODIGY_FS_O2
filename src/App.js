@@ -5,13 +5,14 @@ import HomePage from './components/Home';
 import NotFound from './components/404';
 import Signup from './Auth/Auth';
 import Sidenav from './components/Sidenav';
+// import Dashboard from './components/Dashboard';
+// import Employees from './components/Employees';
 
 const AuthenticatedRoutes = () => {
   return (
     <Routes>
-      {/* <Route path="/dashboard" element={<Homepage />} /> */}
-      {/* <Route path="/employees" element={<Employees />} /> */}
-      {/* Add more routes as needed */}
+      {/* <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/employees" element={<Employees />} /> */}
     </Routes>
   );
 };
@@ -24,16 +25,16 @@ const App = () => {
   };
 
   return (
-    <div className={`App ${collapsed ? 'collapsed' : ''}`}>
+    <div className={`App ${collapsed ? 'sidebar-collapsed' : ''}`}>
       <Router>
         <div className="container-main-page">
-          <Sidenav collapsed={collapsed} />
+          <Sidenav collapsed={collapsed} toggleSidebar={toggleSidebar} />
           <div className="main-content">
             <Routes>
               <Route path="/" element={<Signup />} />
+              <Route path="/dashboard" element={<HomePage />} />
               <Route path="*" element={<NotFound />} />
               <Route path="/*" element={<AuthenticatedRoutes />} />
-              <Route path="/dashboard" element={<HomePage />} />
             </Routes>
           </div>
         </div>

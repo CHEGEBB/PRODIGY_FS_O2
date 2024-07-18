@@ -1,33 +1,28 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDashboard, faUserGroup } from '@fortawesome/free-solid-svg-icons';
-import '../sass/Sidenav.scss'; // Import your SASS file for styles
+import { faDashboard, faUserGroup, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import '../sass/Sidenav.scss';
 
-const Sidenav = () => {
-  const [collapsed, setCollapsed] = useState(false);
-
-  const toggleSidebar = () => {
-    setCollapsed(!collapsed);
-  };
-
+const Sidenav = ({ collapsed, toggleSidebar }) => {
   return (
-    <div className={`container-sidebar ${collapsed ? 'collapsed' : ''}`}>
-      <div className="nav-item">
-        <div className="nav-icon">
-          <FontAwesomeIcon icon={faDashboard} size="2x" />
+    <div className={`sidenav ${collapsed ? 'collapsed' : ''}`}>
+      <div className="nav-items">
+        <div className="nav-item">
+          <div className="nav-icon">
+            <FontAwesomeIcon icon={faDashboard} />
+          </div>
+          <Link to="/dashboard">Dashboard</Link>
         </div>
-        <Link to="/dashboard">Dashboard</Link>
-      </div>
-      <div className="nav-item">
-        <div className="nav-icon">
-          <FontAwesomeIcon icon={faUserGroup} size="2x" />
+        <div className="nav-item">
+          <div className="nav-icon">
+            <FontAwesomeIcon icon={faUserGroup} />
+          </div>
+          <Link to="/employees">Employees</Link>
         </div>
-        <Link to="/employees">Employees</Link>
       </div>
-      {/* Add more sidebar items here */}
       <div className="toggle-sidebar" onClick={toggleSidebar}>
-        {collapsed ? '>' : '<'}
+        <FontAwesomeIcon icon={collapsed ? faChevronRight : faChevronLeft} />
       </div>
     </div>
   );
