@@ -7,7 +7,9 @@ import Employees from "../images/staff-w.png";
 import Expenses from "../images/expense-w.png";
 import Income from "../images/income-w.png";
 import Clients from "../images/user-1.jpg";
-import ProductChart from "../charts/productchart";
+import EmployeeChart from "../charts/Performancechart";
+import HireChart from "../charts/HireChart";
+import TrainingDevelopmentChart from '../charts/TrainingChart';
 
 const FactCard = ({ title, end, prefix, image }) => (
   <div className={`total-${title.toLowerCase()}`}>
@@ -41,8 +43,16 @@ const HomePage = () => {
         ))}
       </div>
       <div className="statistics-graphs">
-        <div className="products-trend">
-          <ProductChart/>
+      <div className="hire-stats">
+        <HireChart/>
+      </div>
+      <div className="development-stats">
+      <div className="training-stats">
+        <TrainingDevelopmentChart/>
+      </div>
+        <div className="employee-performance">
+          <EmployeeChart/>
+        </div>
         </div>
       </div>
     </div>

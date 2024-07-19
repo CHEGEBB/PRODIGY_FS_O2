@@ -67,12 +67,14 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  background-color: aliceblue;
 
   .facts {
     display: flex;
     flex-wrap: nowrap;
     gap: 20px;
     padding: 20px;
+  
 
     .total-employees {
       @include fact-card;
@@ -102,6 +104,13 @@
       @include fact-card;
       background-color: #5F27CD;
       color: white;
+    }
+  }
+  .statistics-graphs{
+    .development-stats{
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
     }
   }
 

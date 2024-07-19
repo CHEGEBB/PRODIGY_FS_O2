@@ -1,0 +1,25 @@
+.chart-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+  
+    @media (min-width: 1280px) and (max-width: 1920px) {
+      width: 90%;
+    }
+  }
+  
+  #chart {
+    width: 100%;
+    height: auto;
+  }
+  
+  :global(.apexcharts-canvas) {
+    width: 100% !important;
+  }
+  
+  :global(.apexcharts-toolbar) {
+    display: none !important;
+  }

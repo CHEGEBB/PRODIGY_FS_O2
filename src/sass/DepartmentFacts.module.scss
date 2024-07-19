@@ -1,0 +1,68 @@
+.departmentFacts {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .timeFrameNav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  
+    button {
+      background-color: #f0f0f0;
+      border: none;
+      padding: 10px 20px;
+      margin: 0 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  
+      &:hover {
+        background-color: #e0e0e0;
+      }
+  
+      &.active {
+        background-color: #008FFB;
+        color: white;
+      }
+    }
+  }
+  
+  .chartsRow {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .chartContainer {
+    flex-basis: calc(33.333% - 20px);
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+  
+    h1 {
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+    }
+  
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #008FFB;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .chartContainer {
+      flex-basis: calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .chartContainer {
+      flex-basis: 100%;
+    }
+  }
