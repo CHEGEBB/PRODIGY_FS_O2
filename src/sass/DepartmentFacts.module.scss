@@ -66,3 +66,18 @@
       flex-basis: 100%;
     }
   }
+  @media (max-width:1920px) {
+    .departmentFacts {
+     max-width: 1900px;
+    }
+  }
+  @media (max-width:1280px) {
+    .departmentFacts {
+     max-width: 1200px;
+    }
+  }
+  @media (max-width:1366px) {
+    .departmentFacts {
+     max-width: 1300px;
+    }
+  }
