@@ -251,6 +251,13 @@ $font-ropa-sans: 'Ropa Sans', sans-serif;
             width: calc(1280px + 60px);
         }
     }
+    @media(min-width:1366px
+    ) {
+        width: calc(1366px - 250px);
+        margin-left: -20px;
+        margin-top: -20px;
+        
+    }
 
     @media (min-width: 1920px) {
         width: calc(1920px - 250px);
@@ -261,4 +268,32 @@ $font-ropa-sans: 'Ropa Sans', sans-serif;
             width: calc(100% - 90px);
         }
     }
+}
+.schedule-icon,
+.notify-icon,
+.message-icon {
+  position: relative;
+}
+
+.ripple-dot {
+  position: absolute;
+  top: -5px;
+  right: 3px;
+  width: 10px;
+  height: 10px;
+  background-color: #ff0000;
+  border-radius: 50%;
+  animation: ripple 1.5s linear infinite;
+}
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.3);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 0, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+  }
 }

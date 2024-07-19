@@ -22,6 +22,7 @@ const Header = () => {
                 <div className="schedule">
                     <div className="schedule-icon">
                         <FontAwesomeIcon icon={faCalendar} />
+                        <div className="ripple-dot"></div>
                     </div>
                     <div className="schedule-text">
                         <p>Schedule</p>
@@ -30,6 +31,8 @@ const Header = () => {
                 <div className="notify">
                     <div className="notify-icon">
                         <FontAwesomeIcon icon={faBell} />
+                        <div className="ripple-dot"></div>
+
                     </div>
                     <div className="notify-text">
                         <p>Notifications</p>
@@ -38,6 +41,8 @@ const Header = () => {
                 <div className="message">
                     <div className="message-icon">
                         <FontAwesomeIcon icon={faMessage} />
+                        <div className="ripple-dot"></div>
+
                     </div>
                     <div className="message-text">
                         <p>Messages</p>

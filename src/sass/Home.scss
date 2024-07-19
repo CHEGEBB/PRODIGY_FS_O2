@@ -1,3 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+@mixin fact-card {
+  width: 190px;
+  height: 120px;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+  }
+
+  &:hover::before {
+    top: -75%;
+    left: -75%;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    z-index: 1;
+  }
+
+  .count {
+    font-size: 28px;
+    font-weight: 600;
+    z-index: 1;
+  }
+
+  img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+  }
+}
 
 .home-container {
   padding: 20px;
@@ -6,27 +66,67 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 
-  h1 {
-    margin-bottom: 20px;
+  .facts {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    padding: 20px;
+
+    .total-employees {
+      @include fact-card;
+      background-color: #6C5CE7;
+      color: white;
+    }
+
+    .total-expenses {
+      @include fact-card;
+      background-color: #FF6B6B;
+      color: white;
+    }
+
+    .total-income {
+      @include fact-card;
+      background-color: #1DD1A1;
+      color: white;
+    }
+
+    .total-assets {
+      @include fact-card;
+      background-color: #54A0FF;
+      color: white;
+    }
+
+    .total-clients {
+      @include fact-card;
+      background-color: #5F27CD;
+      color: white;
+    }
   }
 
-  p {
-    font-size: 16px;
-    line-height: 1.5;
-  }
-
-  @media (min-width: 1280px){
+  @media (min-width: 1280px) {
     width: calc(1280px - 250px);
-    margin: 0;
-
+    margin: 0 auto;
   }
-  @media (min-width: 1920px){
+
+  @media (min-width: 1920px) {
     width: calc(1920px - 250px);
-    margin: 0;
+    margin: 0 auto;
 
     .sidebar-collapsed & {
       width: calc(100% - 60px);
     }
+  }
+}
+
+@keyframes countUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

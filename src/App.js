@@ -21,8 +21,8 @@ const ProtectedRoute = ({ children, isAuthenticated }) => {
     // return <Navigate to="/" replace />;
     return children;
 
+
   }
-  // return children;
 };
 
 const App = () => {
