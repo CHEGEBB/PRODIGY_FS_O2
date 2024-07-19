@@ -1,5 +1,11 @@
+$font-rubik: 'Rubik', sans-serif;
+$font-poppins: 'Poppins', sans-serif;
+$font-open-sans: 'Open Sans', sans-serif;
+$font-jost: 'Jost', sans-serif;
+$font-outfit: 'Outfit', sans-serif;
+$font-ropa-sans: 'Ropa Sans', sans-serif;
 .departmentFacts {
-    font-family: Arial, sans-serif;
+    font-family: $font-outfit;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
@@ -17,6 +23,8 @@
       margin: 0 5px;
       cursor: pointer;
       transition: background-color 0.3s;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
   
       &:hover {
         background-color: #e0e0e0;
@@ -39,9 +47,10 @@
     flex-basis: calc(33.333% - 20px);
     margin-bottom: 20px;
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     padding: 15px;
+    height: 400px;
+
   
     h1 {
       font-size: 1.2rem;

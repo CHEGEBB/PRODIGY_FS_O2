@@ -9,29 +9,29 @@ class PerformanceChart extends React.Component {
     this.state = {
       series: [
         {
-          name: 'Employee 1',
+          name: 'John Smith',
           data: [80, 90, 70, 85, 95, 100, 90]
         },
         {
-          name: 'Employee 2',
+          name: 'Michael Brown',
           data: [70, 85, 75, 80, 90, 85, 75]
         },
         {
-          name: 'Employee 3',
+          name: 'Christina Piper',
           data: [60, 65, 70, 75, 80, 70, 65]
         },
         {
-          name: 'Employee 4',
+          name: 'Irene Johnson',
           data: [90, 95, 85, 80, 85, 95, 90]
         },
         {
-          name: 'Employee 5',
+          name: 'Keanu Reeves',
           data: [100, 100, 95, 90, 95, 100, 100]
         }
       ],
       options: {
         chart: {
-          height: 350,
+          height: 300,
           type: 'line',
           dropShadow: {
             enabled: true,

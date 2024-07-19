@@ -1,17 +1,24 @@
+$font-rubik: 'Rubik', sans-serif;
+$font-poppins: 'Poppins', sans-serif;
+$font-open-sans: 'Open Sans', sans-serif;
+$font-jost: 'Jost', sans-serif;
+$font-outfit: 'Outfit', sans-serif;
+$font-ropa-sans: 'Ropa Sans', sans-serif;
 .chart-container {
     width: 350px;
     margin-left: 10px;
     padding: 10px;
     background-color: #fff;
-    border-radius: 10px;
     height: 400px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   
     h2 {
       text-align: center;
       margin-bottom: 20px;
       color: #333;
-      font-size: 20px;
+      font-size: 16px;
+      font-family: $font-open-sans;
+      font-weight: 700;
     }
   }
   

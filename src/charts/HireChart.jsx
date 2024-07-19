@@ -26,7 +26,7 @@ const DepartmentFacts = () => {
   const createChartOptions = (title) => ({
     chart: {
       type: 'area',
-      height: 350,
+      height: 300,
       zoom: { enabled: false }
     },
     dataLabels: { enabled: false },
@@ -50,7 +50,7 @@ const DepartmentFacts = () => {
         }}
         series={[{ name: title, data: data }]}
         type="area"
-        height={350}
+        height={280}
       />
     </div>
   );
