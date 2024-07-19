@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&family=Poppins:wght@400;500;600&family=Open+Sans:wght@400;600&family=Jost:wght@400;500&family=Outfit:wght@400;500&family=Ropa+Sans&display=swap');
+
+// Bright Colors
+$color-vivid-cyan: #00E5FF;
+$color-electric-lime: #CCFF00;
+$color-hot-pink: #FF1493;
+$color-neon-orange: #FF6600;
+$color-bright-yellow: #FFFF00;
+
+// Celestial Colors
+$color-cosmic-blue: #2E2D88;
+$color-nebula-purple: #8A2BE2;
+$color-galaxy-indigo: #4B0082;
+$color-starlight-silver: #E6E8FA;
+$color-aurora-green: #00FF7F;
+
+// Slate Colors
+$color-charcoal-slate: #36454F;
+$color-pewter-gray: #708090;
+$color-steel-blue: #4682B4;
+$color-slate-gray: #708090;
+$color-gunmetal: #2C3539;
+
+// Pastel Colors
+$color-soft-peach: #FFDAB9;
+$color-mint-green: #98FF98;
+$color-lavender: #E6E6FA;
+$color-powder-blue: #B0E0E6;
+$color-pale-yellow: #FFFFE0;
+
+// Earth Tones
+$color-terracotta: #E2725B;
+$color-sage-green: #B2AC88;
+$color-desert-sand: #EDC9AF;
+$color-clay-brown: #B2713D;
+$color-forest-green: #228B22;
+
+// Jewel Tones
+$color-sapphire-blue: #0F52BA;
+$color-emerald-green: #50C878;
+$color-ruby-red: #E0115F;
+$color-amethyst-purple: #9966CC;
+$color-topaz-yellow: #FFC87C;
+
+// Metallic Colors
+$color-burnished-gold: #D4AF37;
+$color-polished-silver: #C0C0C0;
+$color-brushed-bronze: #CD7F32;
+$color-rose-gold: #B76E79;
+$color-platinum: #E5E4E2;
+
+// Pastel and White Colors
+$pastel-white-1: #F9F9F9;
+$pastel-white-2: #F5F5F5;
+$pastel-white-3: #F0F0F0;
+$pastel-white-4: #ECECEC;
+$pastel-white-5: #E8E8E8;
+$bluish-white-1: #F0F8FF;  // Alice Blue
+$bluish-white-2: #E6F2FF;  // Light Bluish White
+$bluish-white-3: #E0FFFF;  // Light Cyan
+$bluish-white-4: #F0FFFF;  // Azure
+$bluish-white-5: #EBF4FA; 
+
+// Gradient Base Colors
+$color-gradient-start: #6A11CB;
+$color-gradient-end: #2575FC;
+
+// Accent Colors
+$color-accent-coral: #FF6B6B;
+$color-accent-teal: #4ECDC4;
+$color-accent-marigold: #FFBE0B;
+
+$font-rubik: 'Rubik', sans-serif;
+$font-poppins: 'Poppins', sans-serif;
+$font-open-sans: 'Open Sans', sans-serif;
+$font-jost: 'Jost', sans-serif;
+$font-outfit: 'Outfit', sans-serif;
+$font-ropa-sans: 'Ropa Sans', sans-serif;
+
+.employee-container {
+    font-family: $font-poppins;
+    color: $color-charcoal-slate;
+    background-color: $pastel-white-1;
+    
+    .header-cont {
+        // Add any specific header styling here
+    }
+
+    .main-employee-content {
+        padding: 20px;
+        max-width: 1920px;
+        margin: 0 auto;
+
+        h1 {
+            color: $color-sapphire-blue;
+            margin-bottom: 20px;
+            font-family: $font-rubik;
+            font-size: 2.5rem;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            color: $color-pewter-gray;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+        }
+
+        .employee-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 15px;
+
+            th, td {
+                padding: 15px;
+                text-align: left;
+            }
+
+            th {
+                background-color: $color-cosmic-blue;
+                color: $pastel-white-1;
+                font-weight: 500;
+                text-transform: uppercase;
+                font-family: $font-rubik;
+                font-size: 0.9rem;
+            }
+
+            tbody tr {
+                background-color: $bluish-white-5;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease;
+
+                &:hover {
+                    transform: translateY(-3px);
+                    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+                    background-color: $color-powder-blue;
+                }
+
+                td:first-child {
+                    border-top-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                }
+
+                td:last-child {
+                    border-top-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                }
+            }
+
+            .employee-image {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            .action-buttons {
+                display: flex;
+                justify-content: space-around;
+                
+                svg {
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+                }
+
+                .edit-icon {
+                    color: $color-emerald-green;
+                }
+
+                .delete-icon {
+                    color: $color-ruby-red;
+                }
+
+                .info-icon {
+                    color: $color-accent-marigold;
+                }
+            }
+        }
+    }
+}
+
+// Responsive styles
+@media screen and (max-width: 1280px) {
+    .employee-container {
+        .main-employee-content {
+            .employee-table {
+                font-size: 0.9rem;
+
+                th, td {
+                    padding: 10px;
+                }
+
+                .employee-image {
+                    width: 40px;
+                    height: 40px;
+                }
+
+                .action-buttons svg {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .employee-container {
+        .main-employee-content {
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .employee-table {
+                font-size: 0.8rem;
+
+                th, td {
+                    padding: 8px;
+                }
+
+                .employee-image {
+                    width: 30px;
+                    height: 30px;
+                }
+
+                .action-buttons svg {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+}
