@@ -8,8 +8,13 @@ const HomePage = () => {
     <div className="header-home">
       <Header />
     </div>
-      <h1>Employee Management System</h1>
-      <p>Welcome to the dashboard. Here you can manage your employees and view important statistics.</p>
+    <div className="facts">
+      <div className="total-employees"></div>
+      <div className="total-expenses"></div>
+      <div className="total-income"></div>
+      <div className="total-clients"></div>
+      
+    </div>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import "../sass/Header.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBell, faMessage, faCalendar, faHome, faSearch, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faBell, faMessage, faCalendar, faHome, faSearch } from "@fortawesome/free-solid-svg-icons";
+import Admin from "../images/domnic-harris.png";
 
 const Header = () => {
     return (
@@ -46,7 +47,7 @@ const Header = () => {
             <div className="rectangle"></div>
             <div className="profile">
                 <div className="profile-icon">
-                    <FontAwesomeIcon icon={faUser} />
+                <img src={Admin} alt="Admin" />
                 </div>
                 <div className="profile-name">
                     <p>Admin</p>
