@@ -38,14 +38,42 @@ const HomePage = () => {
     { title: 'Assets', end: 1000000, prefix: '$', image: Assets },
   ];
 
-  const TopPerformers=[
-    {image:GraphicMember1,name:'John Smith',designation:'Frontend Developer',performance:'excellent'},
-    {image:GraphicMember2,name:'Irene Johnson',designation:'Backend Developer',performance:'good'},
-    {image:GraphicMember3,name:'Christina Piper',designation:'UX Designer',performance:'average'},
-    {image:GraphicMember4,name:'Mike Brown',designation:'QA Engineer',performance:'good'},
-    {image:GraphicMember5,name:'Keanu Reeves',designation:'Project Manager',performance:'excellent'},
-    {image:GraphicMember6,name:'Emma Thompson',designation:'Marketing Manager',performance:'average'}
-  ]
+  const TopPerformers = [
+    { image: GraphicMember1, name: 'John Smith', designation: 'Frontend Developer', performance: 'excellent' },
+    { image: GraphicMember2, name: 'Irene Johnson', designation: 'Backend Developer', performance: 'good' },
+    { image: GraphicMember3, name: 'Christina Piper', designation: 'UX Designer', performance: 'average' },
+    { image: GraphicMember4, name: 'Mike Brown', designation: 'QA Engineer', performance: 'good' },
+    { image: GraphicMember5, name: 'Keanu Reeves', designation: 'Project Manager', performance: 'excellent' },
+    { image: GraphicMember6, name: 'Emma Thompson', designation: 'Marketing Manager', performance: 'average' }
+  ];
+
+  // Data for today's activities
+  const activities = [
+    { 
+      title: 'Employee Onboarding', 
+      description: 'Complete the onboarding process for the new hires, including orientation and introduction to company policies.' 
+    },
+    { 
+      title: 'Quarterly Performance Reviews', 
+      description: 'Conduct performance reviews for all employees, providing feedback and setting goals for the next quarter.' 
+    },
+    { 
+      title: 'Staff Training Session', 
+      description: 'Organize a training session on new software tools and techniques to enhance team skills and productivity.' 
+    }
+  ];
+  
+
+  // Data for to-do list items
+  const todoList = [
+    { id: 'task1', task: 'Hire a new designer' },
+    { id: 'task2', task: 'Update job descriptions' },
+    { id: 'task3', task: 'Conduct new hire orientation' },
+    { id: 'task4', task: 'Process employee leave requests' },
+    { id: 'task5', task: 'Track employee certifications' },
+    { id: 'task6', task: 'Prepare performance review forms' }
+  ];
+  
   return (
     <div className="home-container">
       <div className="header-home">
@@ -57,38 +85,64 @@ const HomePage = () => {
         ))}
       </div>
       <div className="statistics-graphs">
-      <div className="hire-stats">
-        <HireChart/>
-      </div>
-      <div className="development-stats">
-      <div className="training-stats">
-        <TrainingDevelopmentChart/>
-      </div>
-        <div className="employee-performance">
-          <EmployeeChart/>
+        <div className="hire-stats">
+          <HireChart />
         </div>
-        </div>
-      </div>
-      <div className="top-performers">
-  <h2>Top Performers</h2>
-  <div className="top-performers-list">
-    {TopPerformers.map((performer, index) => (
-      <div key={index} className="top-performer">
-        <div className="performer-image">
-          <img src={performer.image} alt={performer.name} />
-        </div>
-        <div className="performer-details">
-          <h3>{performer.name}</h3>
-          <p>{performer.designation}</p>
-          <div className={`performance performance-${performer.performance}`}>
-            {performer.performance}
+        <div className="development-stats">
+          <div className="training-stats">
+            <TrainingDevelopmentChart />
+          </div>
+          <div className="employee-performance">
+            <EmployeeChart />
           </div>
         </div>
       </div>
-    ))}
-  </div>
-</div>
-
+      <div className="top-performers">
+        <h2>Top Performers</h2>
+        <div className="top-performers-list">
+          {TopPerformers.map((performer, index) => (
+            <div key={index} className="top-performer">
+              <div className="performer-image">
+                <img src={performer.image} alt={performer.name} />
+              </div>
+              <div className="performer-details">
+                <h3>{performer.name}</h3>
+                <p>{performer.designation}</p>
+                <div className={`performance performance-${performer.performance}`}>
+                  {performer.performance}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="now">
+        <div className="today-activities">
+          <h2>Today's Activities</h2>
+          <div className="timeline">
+            {activities.map((activity, index) => (
+              <div key={index} className="timeline-item">
+                <div className="timeline-marker"></div>
+                <div className="timeline-content">
+                  <h3>{activity.title}</h3>
+                  <p>{activity.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="todo-list">
+          <h2>To-Do List</h2>
+          <ul>
+            {todoList.map((item) => (
+              <li key={item.id}>
+                <input type="checkbox" id={item.id} />
+                <label htmlFor={item.id}>{item.task}</label>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }
