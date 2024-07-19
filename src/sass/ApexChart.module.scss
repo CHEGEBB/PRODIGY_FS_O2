@@ -1,0 +1,73 @@
+.dashboard {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.chartRow {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.chartCard {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  box-sizing: border-box;
+
+  @media (max-width: 767px) {
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1279px) {
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+      width: calc(50% - 10px) !important;
+    }
+  }
+
+  @media (min-width: 1280px) and (max-width: 1920px) {
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+      width: calc(33.333% - 13.333px) !important;
+    }
+  }
+}
+
+// Adjustments for larger screens
+@media (min-width: 1921px) {
+  .dashboard {
+    max-width: 1800px;
+  }
+
+  .chartCard {
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+      width: calc(33.333% - 13.333px) !important;
+    }
+  }
+}
+
+// Additional styles for ApexCharts
+:global {
+  .apexcharts-canvas {
+    margin: 0 auto;
+  }
+
+  .apexcharts-title-text {
+    font-weight: bold !important;
+  }
+
+  .apexcharts-legend {
+    padding: 0 !important;
+  }
+}

@@ -1,6 +1,6 @@
 .App {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
 
   .container-main-page {
@@ -16,6 +16,7 @@
   }
 
   &.sidebar-collapsed {
+    position: sticky;
     .main-content {
       margin-left: 60px;
     }

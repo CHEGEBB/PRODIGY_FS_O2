@@ -108,6 +108,8 @@
   @media (min-width: 1280px) {
     width: calc(1280px - 250px);
     margin: 0 auto;
+    min-height: 100vh;
+
   }
 
   @media (min-width: 1920px) {

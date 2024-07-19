@@ -63,13 +63,13 @@ const AuthenticationPages = ({ onLogin }) => {
             <input type="submit" value="Login" className="btn solid" />
             <p className="social-text">Or Sign in with social platforms</p>
             <div className="social-media">
-              <a href="#" className="social-icon">
+              <a href="facebook" className="social-icon">
                 <FontAwesomeIcon icon={faFacebook} />
               </a>
-              <a href="#" className="social-icon">
+              <a href="google" className="social-icon">
                 <FontAwesomeIcon icon={faGoogle} />
               </a>
-              <a href="#" className="social-icon">
+              <a href="linkendin" className="social-icon">
                 <FontAwesomeIcon icon={faLinkedin} />
               </a>
             </div>
@@ -107,13 +107,13 @@ const AuthenticationPages = ({ onLogin }) => {
             <input type="submit" className="btn" value="Sign up" />
             <p className="social-text">Or Sign up with social platforms</p>
             <div className="social-media">
-              <a href="#" className="social-icon">
+              <a href="facebook" className="social-icon">
                 <FontAwesomeIcon icon={faFacebook} />
               </a>
-              <a href="#" className="social-icon">
+              <a href="google" className="social-icon">
                 <FontAwesomeIcon icon={faGoogle} />
               </a>
-              <a href="#" className="social-icon">
+              <a href="linkedin" className="social-icon">
                 <FontAwesomeIcon icon={faLinkedin} />
               </a>
             </div>

@@ -36,7 +36,7 @@ $bluish-white-4: #F0FFFF;  // Azure
 $bluish-white-5: #EBF4FA; 
 .sidenav {
     width: 250px;
-    height: 100vh;
+    min-height: 100vh;
     background-color:  #1492a3 ;
     transition: all 0.3s ease;
     display: flex;
