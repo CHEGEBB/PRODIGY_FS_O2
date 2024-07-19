@@ -21,7 +21,7 @@ const FactCard = ({ title, end, prefix, image }) => (
   <div className={`total-${title.toLowerCase()}`}>
     <h2>{title}</h2>
     <div className="count">
-      <Countup end={end} duration={2.5} prefix={prefix} 
+      <Countup end={end} duration={6} prefix={prefix} 
         onStart={() => ({ animation: 'countUp 0.5s ease forwards' })}
       />
     </div>

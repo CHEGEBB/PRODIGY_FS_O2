@@ -177,6 +177,7 @@ $font-ropa-sans: 'Ropa Sans', sans-serif;
   
           p {
             margin: 5px 0;
+            color:#666;
           }
   
           .performance {
@@ -223,6 +224,8 @@ $font-ropa-sans: 'Ropa Sans', sans-serif;
       h2 {
         margin-bottom: 20px;
         color: #333;
+        font-family: $font-poppins;
+        font-weight: 700;
       }
       
       .timeline {
@@ -254,11 +257,14 @@ $font-ropa-sans: 'Ropa Sans', sans-serif;
             h3 {
               margin: 0 0 5px;
               color: #333;
+              font-family: $font-rubik;
+              font-weight: 600;
             }
             
             p {
               margin: 0;
               color: #666;
+              font-family: $font-outfit;
             }
           }
         }
@@ -292,9 +298,8 @@ $font-ropa-sans: 'Ropa Sans', sans-serif;
       h2 {
         margin-bottom: 20px;
         color: #333;
-        font-family: $font-poppins;
-        font-weight: 600;
-        font-size: 24px;
+        font-family: $font-rubik;
+        font-weight: 700;
       }
   
       ul {
@@ -312,24 +317,24 @@ $font-ropa-sans: 'Ropa Sans', sans-serif;
           transition: background-color 0.3s ease, box-shadow 0.3s ease;
           
           &:hover {
-            background-color: #e2e6ea;
+            background-color: #00E5FF;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
           }
           
           input[type="checkbox"] {
             margin-right: 15px;
             accent-color: #007bff;
+            background-color: #dc3545;
             
             &:checked + label {
               text-decoration: line-through;
-              color: #999;
+              color:#FF1493;
             }
           }
           
           label {
             color: #333;
-            font-size: 16px;
-            font-family: $font-open-sans;
+            font-family: $font-outfit;
           }
         }
       }
