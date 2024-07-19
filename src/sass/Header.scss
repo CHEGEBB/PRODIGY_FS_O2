@@ -1,92 +1,258 @@
+// Bright Colors
+$color-vivid-cyan: #00E5FF;
+$color-electric-lime: #CCFF00;
+$color-hot-pink: #FF1493;
+$color-neon-orange: #FF6600;
+$color-bright-yellow: #FFFF00;
+
+// Celestial Colors
+$color-cosmic-blue: #2E2D88;
+$color-nebula-purple: #8A2BE2;
+$color-galaxy-indigo: #4B0082;
+$color-starlight-silver: #E6E8FA;
+$color-aurora-green: #00FF7F;
+
+// Slate Colors
+$color-charcoal-slate: #36454F;
+$color-pewter-gray: #708090;
+$color-steel-blue: #4682B4;
+$color-slate-gray: #708090;
+$color-gunmetal: #2C3539;
+
+// Pastel Colors
+$color-soft-peach: #FFDAB9;
+$color-mint-green: #98FF98;
+$color-lavender: #E6E6FA;
+$color-powder-blue: #B0E0E6;
+$color-pale-yellow: #FFFFE0;
+
+// Earth Tones
+$color-terracotta: #E2725B;
+$color-sage-green: #B2AC88;
+$color-desert-sand: #EDC9AF;
+$color-clay-brown: #B2713D;
+$color-forest-green: #228B22;
+
+// Jewel Tones
+$color-sapphire-blue: #0F52BA;
+$color-emerald-green: #50C878;
+$color-ruby-red: #E0115F;
+$color-amethyst-purple: #9966CC;
+$color-topaz-yellow: #FFC87C;
+
+// Metallic Colors
+$color-burnished-gold: #D4AF37;
+$color-polished-silver: #C0C0C0;
+$color-brushed-bronze: #CD7F32;
+$color-rose-gold: #B76E79;
+$color-platinum: #E5E4E2;
+
+// Pastel and White Colors
+$pastel-white-1: #F9F9F9;
+$pastel-white-2: #F5F5F5;
+$pastel-white-3: #F0F0F0;
+$pastel-white-4: #ECECEC;
+$pastel-white-5: #E8E8E8;
+$bluish-white-1: #F0F8FF;  // Alice Blue
+$bluish-white-2: #E6F2FF;  // Light Bluish White
+$bluish-white-3: #E0FFFF;  // Light Cyan
+$bluish-white-4: #F0FFFF;  // Azure
+$bluish-white-5: #EBF4FA; 
+
+// Gradient Base Colors
+$color-gradient-start: #6A11CB;
+$color-gradient-end: #2575FC;
+
+// Accent Colors
+$color-accent-coral: #FF6B6B;
+$color-accent-teal: #4ECDC4;
+$color-accent-marigold: #FFBE0B;
+
 $font-rubik: 'Rubik', sans-serif;
 $font-poppins: 'Poppins', sans-serif;
 $font-open-sans: 'Open Sans', sans-serif;
 $font-jost: 'Jost', sans-serif;
 $font-outfit: 'Outfit', sans-serif;
 $font-ropa-sans: 'Ropa Sans', sans-serif;
-$color-vivid-cyan: #00E5FF;
-$color-electric-lime: #CCFF00;
-$color-hot-pink: #FF1493;
-$color-neon-orange: #FF6600;
-$color-bright-yellow: #FFFF00;
-$color-gradient-start: #6A11CB;
-$color-gradient-end: #2575FC;
-$color-accent-coral: #FF6B6B;
-$color-accent-teal: #4ECDC4;
-$color-accent-marigold: #FFBE0B;
-$color-cosmic-blue: #2E2D88;
-$color-nebula-purple: #8A2BE2;
-$color-galaxy-indigo: #4B0082;
-$color-starlight-silver: #E6E8FA;
-$color-aurora-green: #00FF7F;
-.header-container{
-    background-color: #333;
-    padding: 20px;
-    transition: all 0.3s ease;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+.header-container {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color:$bluish-white-1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     align-items: center;
     gap: 10px;
     font-family: $font-rubik;
-    color: #fff;
-    .dash{
+    color: #333;
+    max-height: 60px;
+    .rectangle{
+        background-color: #ccc;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 2px;
+        border-radius:5px;
+        height: 60px;
+
+    }
+
+    .dash {
         margin-right: 10px;
-        color: #fff;
+        color: #333;
         font-size: 18px;
         font-family: $font-rubik;
         display: flex;
         flex-direction: row;
+        align-items: center;
+
+        .dash-icon {
+            display: flex;
+            align-items: center;
+            
+            svg {
+                font-size: 1.5rem;
+                color: $color-hot-pink;
+                margin-right: 0.5rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+        }
     }
-    .inform{
-        color: #fff;
+
+    .search-field {
+        display: flex;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+        padding: 0.5rem 1rem;
+        border: 1px solid $color-charcoal-slate;
+
+        svg {
+            color: $color-nebula-purple;
+            margin-right: 0.5rem;
+        }
+
+        input {
+            background: transparent;
+            outline: none;
+            font-size: 1rem;
+            width: 300px;
+            color: #ccc;
+
+            &::placeholder {
+                color:$color-charcoal-slate;
+                font-family: $font-open-sans;
+                font-size: 12px;
+            }
+        }
+    }
+
+    .inform {
+        color: $color-nebula-purple;
         padding: 20px;
         display: flex;
         flex-direction: row;
         align-items: center;
         gap: 60px;
-        .icon a{
-            width: 60px;
-            color: red;
+        > div {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            &:hover {
+                color: $color-accent-teal;
+                background-color: rgba(255, 255, 255, 0.3);
+            }
+
+            svg {
+                font-size: 1.2rem;
+                margin-right: 0.5rem;
+                background-color: rgba(232, 222, 222, 0.6);
+                padding: 5px;
+                width: 25px;
+                height: 25px;
+                border-radius: 5px;
+
+
+            }
+
+            p {
+                font-size: 14px;
+                font-family: $font-rubik;
+                display: none;
+            }
         }
-        p{
-            margin-right: 10px;
-            font-size: 14px;
-            font-family: $font-rubik;
-            display: none;
-        }
+
         .toggle-sidebar {
             cursor: pointer;
         }
     }
-    
+
+    .profile {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        cursor: pointer;
+
+        .profile-icon {
+            background-color: $color-accent-coral;
+            color: #ffffff;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 0.5rem;
+
+            svg {
+                font-size: 1.2rem;
+            }
+        }
+
+        .profile-name {
+            p {
+                font-size: 1rem;
+                font-weight: bold;
+            }
+        }
+
+        &:hover {
+            .profile-name p {
+                color: $color-accent-marigold;
+            }
+        }
+    }
+
     h1 {
         margin-bottom: 20px;
     }
-    
+
     p {
         font-size: 16px;
         line-height: 1.5;
     }
-   
-  @media (min-width: 1280px){
-    width: calc(1280px - 250px);
-    margin-left: -20px;
-    margin-top: -20px;
-    
-    .sidebar-collapsed & {
-        width: calc(1280px + 60px);
-      }
 
-  }
-  @media (min-width: 1920px){
-    width: calc(1920px - 250px);
-    margin-left: -20px;
-    margin-top: -20px;
-
-    .sidebar-collapsed & {
-      width: calc(100% - 90px);
+    @media (min-width: 1280px) {
+        width: calc(1280px - 250px);
+        margin-left: -20px;
+        margin-top: -20px;
+        
+        .sidebar-collapsed & {
+            width: calc(1280px + 60px);
+        }
     }
-  }
+
+    @media (min-width: 1920px) {
+        width: calc(1920px - 250px);
+        margin-left: -20px;
+        margin-top: -20px;
+
+        .sidebar-collapsed & {
+            width: calc(100% - 90px);
+        }
+    }
 }

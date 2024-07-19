@@ -18,9 +18,11 @@ import LeaveManagement from './pages/Leave';
 
 const ProtectedRoute = ({ children, isAuthenticated }) => {
   if (!isAuthenticated) {
-    return <Navigate to="/" replace />;
+    // return <Navigate to="/" replace />;
+    return children;
+
   }
-  return children;
+  // return children;
 };
 
 const App = () => {
@@ -39,9 +41,10 @@ const App = () => {
     <Router>
       <div className={`App ${collapsed ? 'sidebar-collapsed' : ''}`}>
         <div className="container-main-page">
-          {isAuthenticated && (
-            <Sidenav collapsed={collapsed} toggleSidebar={toggleSidebar} />
-          )}
+        <Sidenav collapsed={collapsed} toggleSidebar={toggleSidebar} />
+
+          {/* {isAuthenticated && (
+          )} */}
           <div className={`main-content ${isAuthenticated ? 'authenticated' : ''}`}>
             <Routes>
               <Route path="/" element={<AuthenticationPages onLogin={handleLogin} />} />
