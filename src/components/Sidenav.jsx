@@ -51,7 +51,7 @@ const Sidenav = ({ collapsed, toggleSidebar }) => {
           <img src={DummyAdmin} alt="Admin" />
           <div className="admin-info">
             <h3>Admin</h3>
-            <p>User Role</p>
+            <p>H.R Manager</p>
           </div>
         </div>
         <div className="alerts">
