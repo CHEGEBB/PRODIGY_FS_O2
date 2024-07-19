@@ -12,10 +12,10 @@ import HireChart from "../charts/HireChart";
 import TrainingDevelopmentChart from '../charts/TrainingChart';
 import GraphicMember1 from "../images/member1.png";
 import GraphicMember2 from "../images/memeber2.png";
-import GraphicMember3 from "../images/member3.jpg";
-import GraphicMember4 from "../images/member4.jpg";
-import GraphicMember5 from "../images/member5.jpg";
-import GraphicMember6 from "../images/member6.jpg";
+import GraphicMember3 from "../images/member8.jpeg";
+import GraphicMember4 from "../images/member14.png";
+import GraphicMember5 from "../images/member13.jpg";
+import GraphicMember6 from "../images/member7.jpeg";
 
 const FactCard = ({ title, end, prefix, image }) => (
   <div className={`total-${title.toLowerCase()}`}>
