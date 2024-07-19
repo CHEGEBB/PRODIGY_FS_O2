@@ -19,45 +19,95 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 15px;
   box-sizing: border-box;
+  height: 400px;
+}
 
-  @media (max-width: 767px) {
-    width: 100% !important;
+.smallChart {
+  width: 100%;
+  height: 350px;
+}
+
+.mediumChart {
+  width: 100%;
+  height: 200px;
+}
+
+.largeChart {
+  width: 100%;
+  height: 250px;
+}
+
+// Mobile styles (up to 767px)
+@media (max-width: 767px) {
+  .chartCard {
     margin-bottom: 20px;
-  }
-
-  @media (min-width: 768px) and (max-width: 1279px) {
-    &:nth-child(1),
-    &:nth-child(2),
-    &:nth-child(3) {
-      width: calc(50% - 10px) !important;
-    }
-  }
-
-  @media (min-width: 1280px) and (max-width: 1920px) {
-    &:nth-child(1),
-    &:nth-child(2),
-    &:nth-child(3) {
-      width: calc(33.333% - 13.333px) !important;
-    }
   }
 }
 
-// Adjustments for larger screens
+// Tablet styles (768px to 1279px)
+@media (min-width: 768px) and (max-width: 1279px) {
+  .smallChart {
+    width: calc(50% - 10px);
+    height: 180px;
+  }
+
+  .mediumChart {
+    width: calc(50% - 10px);
+    height: 220px;
+  }
+
+  .largeChart {
+    height: 300px;
+  }
+}
+
+// Desktop styles (1280px to 1920px)
+@media (min-width: 1280px) and (max-width: 1920px) {
+  .chartCard {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    box-sizing: border-box;
+    height: 350px !important;
+  }
+  .smallChart {
+    width: calc(33.333% - 13.333px);
+    height: 200px;
+  }
+
+  .mediumChart {
+    width: calc(50% - 10px);
+    height: 250px;
+  }
+
+  .largeChart {
+    width: calc(50% - 10px);
+    height: 360px;
+  }
+}
+
+// Large screen styles (above 1920px)
 @media (min-width: 1921px) {
   .dashboard {
     max-width: 1800px;
   }
 
-  .chartCard {
-    &:nth-child(1),
-    &:nth-child(2),
-    &:nth-child(3) {
-      width: calc(33.333% - 13.333px) !important;
-    }
+  .smallChart {
+    width: calc(33.333% - 13.333px);
+    height: 220px;
+  }
+
+  .mediumChart {
+    width: calc(50% - 10px);
+    height: 280px;
+  }
+
+  .largeChart {
+    height: 400px;
   }
 }
 
-// Additional styles for ApexCharts
+// ApexCharts specific styles
 :global {
   .apexcharts-canvas {
     margin: 0 auto;

@@ -1,13 +1,8 @@
 import React from 'react';
 import ApexCharts from 'react-apexcharts';
 import styles from '../sass/ApexChart.module.scss';
-import { useMediaQuery } from 'react-responsive';
 
 const DashboardCharts = () => {
-  const isMobile = useMediaQuery({ maxWidth: 767 });
-  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1279 });
-  const isDesktop = useMediaQuery({ minWidth: 1280, maxWidth: 1920 });
-
   const sparklineData = [47, 45, 54, 38, 56, 24, 65, 31, 37, 39, 62, 51, 35, 41, 35, 27, 93, 53, 61, 27, 54, 43, 19, 46];
   const colorPalette = ['#00D8B6', '#008FFB', '#FEB019', '#FF4560', '#775DD0'];
 
@@ -131,50 +126,30 @@ const DashboardCharts = () => {
     legend: { position: 'top', horizontalAlign: 'left' }
   };
 
-  const getChartWidth = () => {
-    if (isMobile) return '100%';
-    if (isTablet) return '45%';
-    if (isDesktop) return '30%';
-    return '50%'; // default for larger screens
-  };
-
-  const getChartHeight = () => {
-    if (isMobile) return 150;
-    if (isTablet) return 180;
-    if (isDesktop) return 200;
-    return 220;
-  };
-
-  const getLargeChartWidth = () => {
-    if (isMobile) return '100%';
-    if (isTablet) return '100%';
-    return '50%';
-  };
-
   return (
     <div className={styles.dashboard}>
       <div className={styles.chartRow}>
-        <div className={styles.chartCard} style={{ width: getChartWidth() }}>
-          <ApexCharts options={spark1} series={spark1.series} type="area" height={getChartHeight()} />
+        <div className={`${styles.chartCard} ${styles.smallChart}`}>
+          <ApexCharts options={spark1} series={spark1.series} type="area" />
         </div>
-        <div className={styles.chartCard} style={{ width: getChartWidth() }}>
-          <ApexCharts options={spark2} series={spark2.series} type="area" height={getChartHeight()} />
+        <div className={`${styles.chartCard} ${styles.smallChart}`}>
+          <ApexCharts options={spark2} series={spark2.series} type="area" />
         </div>
-        <div className={styles.chartCard} style={{ width: getChartWidth() }}>
-          <ApexCharts options={spark3} series={spark3.series} type="area" height={getChartHeight()} />
-        </div>
-      </div>
-      <div className={styles.chartRow}>
-        <div className={styles.chartCard} style={{ width: getLargeChartWidth() }}>
-          <ApexCharts options={monthlyEarningsOpt} series={monthlyEarningsOpt.series} type="area" height={getChartHeight()} />
-        </div>
-        <div className={styles.chartCard} style={{ width: getLargeChartWidth() }}>
-          <ApexCharts options={optionsBar} series={optionsBar.series} type="bar" height={getChartHeight()} />
+        <div className={`${styles.chartCard} ${styles.smallChart}`}>
+          <ApexCharts options={spark3} series={spark3.series} type="area" />
         </div>
       </div>
       <div className={styles.chartRow}>
-        <div className={styles.chartCard} style={{ width: '100%' }}>
-          <ApexCharts options={optionsArea} series={optionsArea.series} type="area" height={getChartHeight()} />
+        <div className={`${styles.chartCard} ${styles.mediumChart}`}>
+          <ApexCharts options={monthlyEarningsOpt} series={monthlyEarningsOpt.series} type="area" />
+        </div>
+        <div className={`${styles.chartCard} ${styles.mediumChart}`}>
+          <ApexCharts options={optionsBar} series={optionsBar.series} type="bar" />
+        </div>
+      </div>
+      <div className={styles.chartRow}>
+        <div className={`${styles.chartCard} ${styles.largeChart}`}>
+          <ApexCharts options={optionsArea} series={optionsArea.series} type="area" />
         </div>
       </div>
     </div>
