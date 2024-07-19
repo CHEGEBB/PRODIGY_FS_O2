@@ -6,6 +6,7 @@ import NotFound from './components/404';
 import AuthenticationPages from './Auth/Auth';
 import Sidenav from './components/Sidenav';
 import Employees from './pages/Employees';
+import Clients from './pages/Clients';
 
 // Placeholder components for new routes
 const AddEmployee = () => <div>Add Employee Page</div>;
@@ -103,6 +104,14 @@ const App = () => {
                   </ProtectedRoute>
                 }
               />
+              <Route
+                path="/clients"
+                element={
+                  <ProtectedRoute isAuthenticated={isAuthenticated}>
+                    <Clients />
+                  </ProtectedRoute>
+                }
+                />
               <Route
                 path="/attendance"
                 element={

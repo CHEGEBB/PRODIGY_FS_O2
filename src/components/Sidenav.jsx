@@ -24,6 +24,7 @@ import '../sass/Sidenav.scss';
 import DummyAdmin from "../images/domnic-harris.png"
 import animationData from "../images/logo.json"
 import Lottie from 'lottie-react';
+import { faUserCircle } from '@fortawesome/free-solid-svg-icons/faUserCircle';
 
 const Sidenav = ({ collapsed, toggleSidebar }) => {
   const [activeSubmenu, setActiveSubmenu] = useState(null);
@@ -113,6 +114,11 @@ const Sidenav = ({ collapsed, toggleSidebar }) => {
             </Link>
           </div>
         )}
+        {/* clients */}
+        <Link to="/clients" className="nav-item">
+          <FontAwesomeIcon icon={faUserCircle} className="nav-icon" />
+          <span className="nav-label">Clients</span>
+          </Link>
         <Link to="/attendance" className="nav-item">
           <FontAwesomeIcon icon={faCalendar} className="nav-icon" />
           <span className="nav-label">Attendance</span>
