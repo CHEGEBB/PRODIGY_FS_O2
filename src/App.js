@@ -7,16 +7,14 @@ import AuthenticationPages from './Auth/Auth';
 import Sidenav from './components/Sidenav';
 import Employees from './pages/Employees';
 import Clients from './pages/Clients';
-
-// Placeholder components for new routes
-const AddEmployee = () => <div>Add Employee Page</div>;
-const EditEmployee = () => <div>Edit Employee Page</div>;
-const Projects = () => <div>Projects Page</div>;
-const AddProject = () => <div>Add Project Page</div>;
-const EditProject = () => <div>Edit Project Page</div>;
-const Attendance = () => <div>Attendance Page</div>;
-const LeaveManagement = () => <div>Leave Management Page</div>;
-const Settings = () => <div>Settings Page</div>;
+import Settings from './pages/Settings';
+import Projects from './pages/Projects';
+import AddProject from './pages/AddProjects';
+import AddEmployee from './pages/AddEmployees';
+import EditEmployee from './pages/EditEmployees';
+import EditProject from './pages/EditProjects';
+import Attendance from './pages/Attendance';
+import LeaveManagement from './pages/Leave';
 
 const ProtectedRoute = ({ children, isAuthenticated }) => {
   if (!isAuthenticated) {
@@ -84,7 +82,7 @@ const App = () => {
                 path="/projects"
                 element={
                   <ProtectedRoute isAuthenticated={isAuthenticated}>
-                    <Projects />
+                  <Projects />
                   </ProtectedRoute>
                 }
               />
