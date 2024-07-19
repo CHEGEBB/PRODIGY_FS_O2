@@ -1,0 +1,222 @@
+module.exports = [
+    {
+        image: "https://randomuser.me/api/portraits/men/1.jpg",
+        name: "John Doe",
+        designation: "Software Engineer",
+        department: "Engineering",
+        mobile: '+1234567890',
+        email: 'johndoe@example.com',
+        salary: "$120,000",
+        joiningDate: "01/01/2021",
+        backstory: "John impressed us with his innovative solutions during the hackathon."
+    },
+    {
+        image: "https://randomuser.me/api/portraits/women/1.jpg",
+        name: "Jane Smith",
+        designation: "Product Manager",
+        department: "Product",
+        mobile: '+1987654321',
+        email: 'janesmith@example.com',
+        salary: "$110,000",
+        joiningDate: "03/15/2021",
+        backstory: "Jane's market analysis skills caught our attention at a tech conference."
+    },
+    {
+        image: "https://randomuser.me/api/portraits/men/2.jpg",
+        name: "Michael Johnson",
+        designation: "Data Scientist",
+        department: "Analytics",
+        mobile: '+1122334455',
+        email: 'michael.j@example.com',
+        salary: "$115,000",
+        joiningDate: "05/20/2021",
+        backstory: "Michael's innovative approach to big data problems stood out in his interview."
+    },
+    {
+        image: "https://randomuser.me/api/portraits/women/2.jpg",
+        name: "Emily Brown",
+        designation: "UX Designer",
+        department: "Design",
+        mobile: '+1234567891',
+        email: 'emily.b@example.com',
+        salary: "$95,000",
+        joiningDate: "07/01/2021",
+        backstory: "Emily's portfolio showcased exceptional user-centric design principles."
+    },
+    {
+        image: "https://randomuser.me/api/portraits/men/3.jpg",
+        name: "David Wilson",
+        designation: "DevOps Engineer",
+        department: "IT Operations",
+        mobile: '+1987654322',
+        email: 'david.w@example.com',
+        salary: "$125,000",
+        joiningDate: "09/10/2021",
+        backstory: "David's experience in streamlining deployment processes impressed the team."
+    },
+    {
+        image: "https://randomuser.me/api/portraits/women/3.jpg",
+        name: "Sarah Davis",
+        designation: "Marketing Specialist",
+        department: "Marketing",
+        mobile: '+1122334456',
+        email: 'sarah.d@example.com',
+        salary: "$90,000",
+        joiningDate: "11/15/2021",
+        backstory: "Sarah's creative campaign ideas aligned perfectly with our brand vision."
+    },
+    {
+        image: "https://randomuser.me/api/portraits/men/4.jpg",
+        name: "Robert Taylor",
+        designation: "Financial Analyst",
+        department: "Finance",
+        mobile: '+1234567892',
+        email: 'robert.t@example.com',
+        salary: "$105,000",
+        joiningDate: "02/01/2022",
+        backstory: "Robert's keen eye for financial trends made him stand out among candidates."
+    },
+    {
+        image: "https://randomuser.me/api/portraits/women/4.jpg",
+        name: "Lisa Anderson",
+        designation: "HR Manager",
+        department: "Human Resources",
+        mobile: '+1987654323',
+        email: 'lisa.a@example.com',
+        salary: "$100,000",
+        joiningDate: "04/15/2022",
+        backstory: "Lisa's innovative approach to employee engagement caught our attention."
+    },
+    {
+        image: "https://randomuser.me/api/portraits/men/5.jpg",
+        name: "James Martinez",
+        designation: "Sales Representative",
+        department: "Sales",
+        mobile: '+1122334457',
+        email: 'james.m@example.com',
+        salary: "$85,000",
+        joiningDate: "06/20/2022",
+        backstory: "James' charisma and track record in closing deals made him an ideal fit."
+    },
+    {
+        image: "https://randomuser.me/api/portraits/women/5.jpg",
+        name: "Jennifer Garcia",
+        designation: "Quality Assurance Tester",
+        department: "Quality Assurance",
+        mobile: '+1234567893',
+        email: 'jennifer.g@example.com',
+        salary: "$92,000",
+        joiningDate: "08/01/2022",
+        backstory: "Jennifer's attention to detail and thorough testing methodologies impressed us."
+    },
+    {
+        image: "https://randomuser.me/api/portraits/men/6.jpg",
+        name: "Charles Rodriguez",
+        designation: "System Administrator",
+        department: "IT Operations",
+        mobile: '+1987654324',
+        email: 'charles.r@example.com',
+        salary: "$98,000",
+        joiningDate: "10/10/2022",
+        backstory: "Charles' expertise in managing complex systems made him a valuable addition."
+    },
+    {
+        image: "https://randomuser.me/api/portraits/women/6.jpg",
+        name: "Patricia Lewis",
+        designation: "Content Writer",
+        department: "Marketing",
+        mobile: '+1122334458',
+        email: 'patricia.l@example.com',
+        salary: "$80,000",
+        joiningDate: "12/15/2022",
+        backstory: "Patricia's portfolio of engaging content aligned with our brand voice."
+    },
+    {
+        image: "https://randomuser.me/api/portraits/men/7.jpg",
+        name: "Daniel Lee",
+        designation: "Business Analyst",
+        department: "Operations",
+        mobile: '+1234567894',
+        email: 'daniel.l@example.com',
+        salary: "$100,000",
+        joiningDate: "02/01/2023",
+        backstory: "Daniel's strategic thinking and analytical skills stood out in his case study presentation."
+    },
+    {
+        image: "https://randomuser.me/api/portraits/women/7.jpg",
+        name: "Nancy Walker",
+        designation: "Customer Support Specialist",
+        department: "Customer Service",
+        mobile: '+1987654325',
+        email: 'nancy.w@example.com',
+        salary: "$75,000",
+        joiningDate: "04/15/2023",
+        backstory: "Nancy's empathetic approach to customer issues aligned with our service values."
+    },
+    {
+        image: "https://randomuser.me/api/portraits/men/8.jpg",
+        name: "Thomas Hall",
+        designation: "Frontend Developer",
+        department: "Engineering",
+        mobile: '+1122334459',
+        email: 'thomas.h@example.com',
+        salary: "$110,000",
+        joiningDate: "06/20/2023",
+        backstory: "Thomas' portfolio of responsive and accessible web applications impressed our team."
+    },
+    {
+        image: "https://randomuser.me/api/portraits/women/8.jpg",
+        name: "Karen Allen",
+        designation: "Project Coordinator",
+        department: "Project Management",
+        mobile: '+1234567895',
+        email: 'karen.a@example.com',
+        salary: "$88,000",
+        joiningDate: "08/01/2023",
+        backstory: "Karen's ability to juggle multiple projects efficiently made her stand out."
+    },
+    {
+        image: "https://randomuser.me/api/portraits/men/9.jpg",
+        name: "George Young",
+        designation: "Database Administrator",
+        department: "IT Operations",
+        mobile: '+1987654326',
+        email: 'george.y@example.com',
+        salary: "$115,000",
+        joiningDate: "10/10/2023",
+        backstory: "George's expertise in optimizing database performance caught our attention."
+    },
+    {
+        image: "https://randomuser.me/api/portraits/women/9.jpg",
+        name: "Betty King",
+        designation: "Graphic Designer",
+        department: "Design",
+        mobile: '+1122334460',
+        email: 'betty.k@example.com',
+        salary: "$85,000",
+        joiningDate: "12/15/2023",
+        backstory: "Betty's creative portfolio and brand-aligned designs made her an excellent fit."
+    },
+    {
+        image: "https://randomuser.me/api/portraits/men/10.jpg",
+        name: "Edward Scott",
+        designation: "Security Analyst",
+        department: "IT Security",
+        mobile: '+1234567896',
+        email: 'edward.s@example.com',
+        salary: "$120,000",
+        joiningDate: "02/01/2024",
+        backstory: "Edward's proactive approach to identifying security vulnerabilities impressed us."
+    },
+    {
+        image: "https://randomuser.me/api/portraits/women/10.jpg",
+        name: "Margaret Green",
+        designation: "Legal Counsel",
+        department: "Legal",
+        mobile: '+1987654327',
+        email: 'margaret.g@example.com',
+        salary: "$130,000",
+        joiningDate: "04/15/2024",
+        backstory: "Margaret's expertise in tech-related legal matters made her an invaluable addition."
+    }
+];
