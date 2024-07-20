@@ -1,9 +1,11 @@
+import Header from '../components/Header';
 const AddEmployee = () => {
     return (  
-        <div>
-            <h1>Add Employee</h1>
-            {/* form to add new employees */}
+      <div className="add-employee-container">
+        <div className="header-container-add">
+            <Header />
         </div>
+      </div>
  
     );
 }

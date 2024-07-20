@@ -1,9 +1,11 @@
+import Header from '../components/Header';
 const AddProject = () => {
     return (  
-        <div>
-            <h1>Add Project</h1>
-            {/* form to add a new project */}
+      <div className="add-employee-project">
+        <div className="header-container-add-project">
+            <Header />
         </div>
+      </div>
  
     );
 }
