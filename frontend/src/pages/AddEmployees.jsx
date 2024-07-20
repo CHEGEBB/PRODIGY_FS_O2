@@ -5,6 +5,10 @@ const AddEmployee = () => {
         <div className="header-container-add">
             <Header />
         </div>
+        <div className="add-main-container">
+            {/* form to add employees */}
+            
+        </div>
       </div>
  
     );
