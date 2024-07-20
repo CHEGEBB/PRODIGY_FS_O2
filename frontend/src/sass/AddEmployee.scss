@@ -1,0 +1,53 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+  }
+  .form-group {
+    position: relative;
+    margin-bottom: 20px;
+  
+    input[type='text'] {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 12px 12px 12px 12px;
+      font-size: 16px;
+      width: 200px;
+      background: transparent;
+      position: relative;
+      z-index: 1;
+  
+      &:focus {
+        outline: none;
+        border-color: #333;
+      }
+  
+      &:focus + label,
+      &:valid + label {
+        top: -8px;
+        left: 10px;
+        font-size: 12px;
+        color: #333;
+        background: #f4f4f4;
+        padding: 0 4px;
+        z-index: 2;
+      }
+    }
+  
+    label {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      font-size: 16px;
+      color: #999;
+      pointer-events: none;
+      transition: 0.2s ease all;
+      background: transparent;
+    }
+  }
+  
