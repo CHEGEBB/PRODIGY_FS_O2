@@ -1,6 +1,18 @@
 
-  
-  /* Container for the input and label */
+  @mixin group-fields{
+    display: flex;
+    flex-direction: row;
+  }
+  form{
+    display: flex;
+    background-color:aliceblue;
+    margin: 20px auto;
+    min-height: 100vh;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+.group{
+background-color: aqua;
+
   .form-group {
     position: relative;
     margin-bottom: 20px;
@@ -52,3 +64,5 @@
       background: transparent;
     }
   }
+}
+}
