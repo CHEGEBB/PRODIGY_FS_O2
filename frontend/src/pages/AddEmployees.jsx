@@ -1,9 +1,11 @@
 import {
+  faAddressBook,
   faBuilding,
   faCalendarDay,
   faComputer,
   faEnvelope,
   faIdCard,
+  faMoneyBill,
   faPhone,
   faTransgender,
   faUserAlt
@@ -21,6 +23,7 @@ const AddEmployee = () => {
         {/* form to add employees */}
 
         <form className="add-employee">
+        <h2>Add Employee</h2>
             <div className="group">
               <div className="form-group">
                 <div className="user-icon">
@@ -71,7 +74,7 @@ const AddEmployee = () => {
                 <input type="tel" id="mobile" required />
                 <label htmlFor="mobile">Mobile Number*</label>
               </div>
-            </div><div className="personal-info">
+            </div>
             <div className="group">
               <div className="form-group">
                 {/* gender */}
@@ -105,9 +108,22 @@ const AddEmployee = () => {
                 </div>
                 <div className="form-group">
                   {/* salary */}
-                  
+                  <div className="user-icon">
+                    <FontAwesomeIcon icon={faMoneyBill} />
+                    </div>
+                    <input type="number" id="salary" required />
+                    <label htmlFor="salary">Salary*</label>
                 </div>
               </div>
+              <div className="group">
+                <div className="form-group">
+                  {/* address */}
+                  <div className="user-icon">
+                    <FontAwesomeIcon icon={faAddressBook} />
+                  </div>
+                  <textarea id="address"  required></textarea>
+                  <label htmlFor="address" className="mt-4 address">Address*</label>
+                </div>
               </div>
         </form>
       </div>

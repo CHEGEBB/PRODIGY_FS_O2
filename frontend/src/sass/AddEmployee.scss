@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     padding: 10px;
-    height: 150px;
+    height: 130px;
     
     
     & > * {
@@ -44,8 +44,9 @@
       transform: translateY(-50%);
       color: #999;
     }
+    
   
-    input, select {
+    input, select,textarea {
       border: 1px solid #ccc;
       border-radius: 4px;
       padding: 12px 12px 12px 40px;
@@ -83,6 +84,7 @@
       transition: 0.2s ease all;
       background: transparent;
     }
+   
   }
 }
 }
