@@ -15,14 +15,13 @@ import EditEmployee from './pages/EditEmployees';
 import EditProject from './pages/EditProjects';
 import Attendance from './pages/Attendance';
 import LeaveManagement from './pages/Leave';
-
+import { Navigate } from 'react-router-dom';
 const ProtectedRoute = ({ children, isAuthenticated }) => {
   if (!isAuthenticated) {
-    // return <Navigate to="/" replace />;
-    return children;
-
-
+    return <Navigate to="/" replace />;
   }
+  return children;
+
 };
 
 const App = () => {
@@ -41,10 +40,11 @@ const App = () => {
     <Router>
       <div className={`App ${collapsed ? 'sidebar-collapsed' : ''}`}>
         <div className="container-main-page">
-        <Sidenav collapsed={collapsed} toggleSidebar={toggleSidebar} />
+     
 
-          {/* {isAuthenticated && (
-          )} */}
+          {isAuthenticated && (
+            <Sidenav collapsed={collapsed} toggleSidebar={toggleSidebar} />
+          )}
           <div className={`main-content ${isAuthenticated ? 'authenticated' : ''}`}>
             <Routes>
               <Route path="/" element={<AuthenticationPages onLogin={handleLogin} />} />

@@ -6,34 +6,40 @@ import '../sass/Auth.scss';
 import Vector1 from "../images/undraw_working_re_ddwy.svg";
 import Vector2 from "../images/undraw_team_up_re_84ok.svg";
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 const AuthenticationPages = ({ onLogin }) => {
   const [isSignUpMode, setIsSignUpMode] = useState(false);
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
   const toggleMode = () => {
     setIsSignUpMode(!isSignUpMode);
   };
 
-  const handleSignIn = (e) => {
+  const handleSignIn = async (e) => {
     e.preventDefault();
-    // Hardcoded credentials
-    if (username === 'admin' && password === 'password123') {
+    try {
+      const response = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+      localStorage.setItem('token', response.data.token);
       onLogin();
       navigate('/dashboard');
-    } else {
+    } catch (error) {
       alert('Invalid credentials. Please try again.');
     }
   };
 
-  const handleSignUp = (e) => {
+  const handleSignUp = async (e) => {
     e.preventDefault();
-    // Here you would typically handle the sign-up process
-    // For now, we'll just show an alert
-    alert('Sign up functionality not implemented yet.');
+    try {
+      await axios.post('http://localhost:5000/api/auth/signup', { name, email, password });
+      alert('Sign up successful. Please log in.');
+      toggleMode();
+    } catch (error) {
+      alert('Sign up failed. Please try again.');
+    }
   };
 
   return (
@@ -43,12 +49,13 @@ const AuthenticationPages = ({ onLogin }) => {
           <form onSubmit={handleSignIn} className="sign-in-form">
             <h2 className="title">Sign in</h2>
             <div className="input-field">
-              <FontAwesomeIcon icon={faUser} className='usercon' />
+              <FontAwesomeIcon icon={faEnvelope} className='envelopcon' />
               <input 
-                type="text" 
-                placeholder="Username" 
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                type="email" 
+                placeholder="Email" 
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
               />
             </div>
             <div className="input-field">
@@ -58,18 +65,19 @@ const AuthenticationPages = ({ onLogin }) => {
                 placeholder="Password" 
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+                required
               />
             </div>
             <input type="submit" value="Login" className="btn solid" />
             <p className="social-text">Or Sign in with social platforms</p>
             <div className="social-media">
-              <a href="facebook" className="social-icon">
+              <a href="#" className="social-icon">
                 <FontAwesomeIcon icon={faFacebook} />
               </a>
-              <a href="google" className="social-icon">
+              <a href="#" className="social-icon">
                 <FontAwesomeIcon icon={faGoogle} />
               </a>
-              <a href="linkendin" className="social-icon">
+              <a href="#" className="social-icon">
                 <FontAwesomeIcon icon={faLinkedin} />
               </a>
             </div>
@@ -80,9 +88,10 @@ const AuthenticationPages = ({ onLogin }) => {
               <FontAwesomeIcon icon={faUser} className='usercon' />
               <input 
                 type="text" 
-                placeholder="Username" 
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                placeholder="Name" 
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
               />
             </div>
             <div className="input-field">
@@ -90,9 +99,9 @@ const AuthenticationPages = ({ onLogin }) => {
               <input 
                 type="email" 
                 placeholder="Email" 
-                className='input-div bg-slate-500'
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                required
               />
             </div>
             <div className="input-field">
@@ -102,18 +111,19 @@ const AuthenticationPages = ({ onLogin }) => {
                 placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+                required
               />
             </div>
             <input type="submit" className="btn" value="Sign up" />
             <p className="social-text">Or Sign up with social platforms</p>
             <div className="social-media">
-              <a href="facebook" className="social-icon">
+              <a href="#" className="social-icon">
                 <FontAwesomeIcon icon={faFacebook} />
               </a>
-              <a href="google" className="social-icon">
+              <a href="#" className="social-icon">
                 <FontAwesomeIcon icon={faGoogle} />
               </a>
-              <a href="linkedin" className="social-icon">
+              <a href="#" className="social-icon">
                 <FontAwesomeIcon icon={faLinkedin} />
               </a>
             </div>
@@ -126,7 +136,7 @@ const AuthenticationPages = ({ onLogin }) => {
           <div className="content">
             <h3>New here ?</h3>
             <p>
-              Enter your personal details and start journey with us
+              Enter your personal details and start your journey with us
             </p>
             <button className="btn transparent" onClick={toggleMode}>
               Sign up
@@ -138,7 +148,7 @@ const AuthenticationPages = ({ onLogin }) => {
           <div className="content">
             <h3>One of us ?</h3>
             <p>
-              To keep connected with us please login with your personal info
+              To keep connected with us, please login with your personal info
             </p>
             <button className="btn transparent" onClick={toggleMode}>
               Sign in
