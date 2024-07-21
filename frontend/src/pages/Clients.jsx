@@ -156,7 +156,9 @@ const Clients = () => {
 
     return (
         <div className="clients-container">
-            <Header />
+        <div className="header-top-container">
+        <Header />
+        </div>
             <main className="clients-main">
                 <h1><FontAwesomeIcon icon={faGlobe} /> Our Clients</h1>
                 <div className="clients-grid">
