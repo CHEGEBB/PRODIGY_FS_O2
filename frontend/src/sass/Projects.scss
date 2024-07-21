@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&family=Poppins&family=Open+Sans&family=Jost&family=Outfit&family=Ropa+Sans&display=swap');
+
 $primary-color: #3498db;
 $secondary-color: #2c3e50;
 $text-color: #333;
@@ -5,6 +7,12 @@ $card-bg-color: #fff;
 $progress-bg-color: #e0e0e0;
 $progress-color: #6A11CB;
 $progress-text-color: #fff;
+$font-rubik: 'Rubik', sans-serif;
+$font-poppins: 'Poppins', sans-serif;
+$font-open-sans: 'Open Sans', sans-serif;
+$font-jost: 'Jost', sans-serif;
+$font-outfit: 'Outfit', sans-serif;
+$font-ropa-sans: 'Ropa Sans', sans-serif;
 
 .projects-container {
     max-width: 1920px;
@@ -17,12 +25,13 @@ $progress-text-color: #fff;
     }
 }
 
-.main-content {
+.main-content-project {
     h1 {
         font-size: 3rem;
         text-align: center;
         margin-bottom: 2rem;
         color: $primary-color;
+        font-family: $font-open-sans;
     }
 }
 
@@ -33,11 +42,11 @@ $progress-text-color: #fff;
 }
 
 .project-card {
-    background-color: $card-bg-color;
+    background-color: #ECECEC;
     border-radius: 10px;
-    width: 400px;
+    width: 500px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
 
     &:hover {
@@ -67,12 +76,14 @@ $progress-text-color: #fff;
             font-size: 1.5rem;
             margin-bottom: 0.5rem;
             color: $secondary-color;
+            font-family: $font-rubik;
         }
 
         p {
             font-size: 1rem;
             color: $text-color;
             margin-bottom: 1rem;
+            font-family: $font-outfit;
         }
     }
 }
@@ -84,6 +95,7 @@ $progress-text-color: #fff;
         font-size: 1.2rem;
         margin-bottom: 0.5rem;
         color: $secondary-color;
+        font-family: $font-poppins;
     }
 
     ul {
@@ -95,16 +107,26 @@ $progress-text-color: #fff;
             color: $text-color;
             margin-bottom: 0.25rem;
             cursor: pointer;
+            display: flex;
+            align-items: center;
+            font-family: $font-jost;
+
+            img {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                margin-right: 10px;
+            }
         }
     }
 }
 
 .progress-bar-container {
     background-color: $progress-bg-color;
-    // border-radius: 5px;
     height: 15px;
     overflow: hidden;
-    box-shadow:  2px 2px 2px rgba(0, 0, 0,  0.3);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1rem;
 }
 
 .progress-bar {
@@ -114,23 +136,166 @@ $progress-text-color: #fff;
     align-items: center;
     justify-content: flex-end;
     padding-right: 0.5rem;
-    // border-radius: 10px;
 }
 
 .progress-text {
     color: $progress-text-color;
     font-size: 0.8rem;
     font-weight: bold;
+    font-family: $font-ropa-sans;
+}
+
+.project-actions {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 5px;
+        background-color: $primary-color;
+        color: white;
+        cursor: pointer;
+        font-family: $font-poppins;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: darken($primary-color, 10%);
+        }
+
+        svg {
+            margin-right: 5px;
+        }
+    }
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+
+    h2 {
+        font-family: $font-rubik;
+        color: $primary-color;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-family: $font-outfit;
+        margin-bottom: 1rem;
+    }
+
+    h3 {
+        font-family: $font-poppins;
+        color: $secondary-color;
+        margin-bottom: 1rem;
+    }
+
+    .team-members-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 1rem;
+        margin-bottom: 1rem;
+
+        .team-member {
+            text-align: center;
+
+            img {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                margin-bottom: 0.5rem;
+            }
+
+            p {
+                font-family: $font-jost;
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+    button {
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 5px;
+        background-color: $primary-color;
+        color: white;
+        cursor: pointer;
+        font-family: $font-poppins;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: darken($primary-color, 10%);
+        }
+    }
 }
 
 @media (max-width: 1280px) {
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+    }
+
+    .project-card {
+        width: 400px;
+    }
+    .projects-container{
+        padding: 1rem;
+    }
+}
+@media (min-width:1366px){
+    .projects-grid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+    .projects-container {
+        padding: 2rem;
+    }
+    .project-card {
+        width: 450px;
+    }
+}
+@media (min-width:1920px) {
+    .projects-grid{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+    .projects-container {
+        padding: 2rem;
+    }
+    .project-card {
+        width: 400px;
     }
 }
 
 @media (max-width: 768px) {
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 1rem;
     }
 }
