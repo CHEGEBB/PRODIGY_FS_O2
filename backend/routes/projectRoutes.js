@@ -1,21 +1,15 @@
-// projectRoutes.js
 const express = require('express');
 const router = express.Router();
-const projectController = require('../controllers/projectController');
+const Project = require('../models/Project');
 
-// Get all projects
-router.get('/', projectController.getAllProjects);
-
-// Get a single project by ID
-router.get('/:id', projectController.getProjectById);
-
-// Create a new project
-router.post('/', projectController.createProject);
-
-// Update a project
-router.put('/:id', projectController.updateProject);
-
-// Delete a project
-router.delete('/:id', projectController.deleteProject);
+// GET /api/projects
+router.get('/projects', async (req, res) => {
+  try {
+    const projects = await Project.find();
+    res.json(projects);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
 
 module.exports = router;

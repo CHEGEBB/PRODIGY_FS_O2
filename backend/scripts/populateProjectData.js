@@ -4,7 +4,7 @@ const projects = [
       id: 1,
       name: "AI-Driven Customer Service Platform",
       description: "An advanced AI system that handles customer queries and complaints, reducing response times and improving satisfaction rates.",
-      image: "https://example.com/images/ai-customer-service.jpg",
+      image: "https://picsum.photos/id/20/200/300?grayscale&blur=2",
       teamMembers: ["John Doe", "Jane Smith", "Robert Johnson"],
       progress: 75
     },
@@ -12,7 +12,7 @@ const projects = [
       id: 2,
       name: "Blockchain-Based Supply Chain Management",
       description: "A decentralized system for tracking products from manufacture to delivery, ensuring transparency and reducing fraud.",
-      image: "https://example.com/images/blockchain-supply-chain.jpg",
+      image: "https://picsum.photos/id/70/200/300?grayscale&blur=2",
       teamMembers: ["Alice Williams", "Bob Brown", "Charlie Davis"],
       progress: 60
     },
