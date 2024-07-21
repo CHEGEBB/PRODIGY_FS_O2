@@ -21,3 +21,24 @@ app.use('/api/employees', employeeRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+// Example: Create a new project
+app.post('/api/projects', async (req, res) => {
+  try {
+      const newProject = new Project(req.body);
+      await newProject.save();
+      res.status(201).json(newProject);
+  } catch (error) {
+      res.status(400).json({ message: error.message });
+  }
+});
+
+// Example: Get all projects
+app.get('/api/projects', async (req, res) => {
+  try {
+      const projects = await Project.find();
+      res.json(projects);
+  } catch (error) {
+      res.status(500).json({ message: error.message });
+  }
+});
