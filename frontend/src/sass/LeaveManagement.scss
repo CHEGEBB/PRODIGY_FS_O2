@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;700&display=swap');
+
+// Variables
+$primary-color: #3498db;
+$secondary-color: #2c3e50;
+$background-color: #f4f4f4;
+$text-color: #333;
+$card-bg-color: #fff;
+$approve-color: #27ae60;
+$reject-color: #e74c3c;
+$pending-color: #f39c12;
+$font-primary: 'Poppins', sans-serif;
+$font-secondary: 'Roboto', sans-serif;
+
+// Mixins
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin card-shadow {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+// Global Styles
+body {
+    font-family: $font-primary;
+    background-color: $background-color;
+    color: $text-color;
+}
+
+.leave-management-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.leave-management-main {
+    h1 {
+        font-size: 2.5rem;
+        color: $primary-color;
+        text-align: center;
+        margin-bottom: 2rem;
+        font-weight: 600;
+
+        svg {
+            margin-right: 0.5rem;
+        }
+    }
+}
+
+.new-request-btn {
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 2rem;
+
+    &:hover {
+        background-color: darken($primary-color, 10%);
+    }
+
+    svg {
+        margin-right: 0.5rem;
+    }
+}
+
+.form-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    @include flex-center;
+    z-index: 1000;
+}
+
+.leave-request-form {
+    background-color: $card-bg-color;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    @include card-shadow;
+
+    h2 {
+        font-size: 1.8rem;
+        color: $secondary-color;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: $font-primary;
+        }
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+    }
+
+    .form-actions {
+        display: flex;
+        justify-content: space-between;
+
+        button {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 1rem;
+
+            &[type="submit"] {
+                background-color: $approve-color;
+                color: white;
+
+                &:hover {
+                    background-color: darken($approve-color, 10%);
+                }
+            }
+
+            &[type="button"] {
+                background-color: $reject-color;
+                color: white;
+
+                &:hover {
+                    background-color: darken($reject-color, 10%);
+                }
+            }
+        }
+    }
+}
+
+.leave-requests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.leave-request-card {
+    background-color: $card-bg-color;
+    border-radius: 10px;
+    padding: 1.5rem;
+    @include card-shadow;
+
+    &.pending {
+        border-left: 5px solid $pending-color;
+    }
+
+    &.approved {
+        border-left: 5px solid $approve-color;
+    }
+
+    &.rejected {
+        border-left: 5px solid $reject-color;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+        color: $secondary-color;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        margin-bottom: 0.5rem;
+
+        svg {
+            margin-right: 0.5rem;
+            color: $primary-color;
+        }
+    }
+
+    .action-buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+
+        button {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 0.9rem;
+
+            &.approve {
+                background-color: $approve-color;
+                color: white;
+
+                &:hover {
+                    background-color: darken($approve-color, 10%);
+                }
+            }
+
+            &.reject {
+                background-color: $reject-color;
+                color: white;
+
+                &:hover {
+                    background-color: darken($reject-color, 10%);
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .leave-requests-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .leave-request-form {
+        width: 95%;
+        padding: 1.5rem;
+    }
+}

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+// src/components/Sidenav.js
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
@@ -16,23 +17,25 @@ import {
   faUserPlus,
   faUserEdit,
   faProjectDiagram,
-  faCog
+  faCog,
+  faUserCircle
 } from '@fortawesome/free-solid-svg-icons';
 import '../sass/Sidenav.scss';
-import DummyAdmin from "../images/domnic-harris.png"
-import animationData from "../images/logo.json"
+import DummyAdmin from "../images/domnic-harris.png";
+import animationData from "../images/logo.json";
 import Lottie from 'lottie-react';
-import { faUserCircle } from '@fortawesome/free-solid-svg-icons/faUserCircle';
+import { ThemeContext } from '../context/ThemeContext'; // Ensure this path is correct
 
 const Sidenav = ({ collapsed, toggleSidebar }) => {
   const [activeSubmenu, setActiveSubmenu] = useState(null);
+  const { sidebarColor } = useContext(ThemeContext);
 
   const toggleSubmenu = (submenu) => {
     setActiveSubmenu(activeSubmenu === submenu ? null : submenu);
   };
 
   return (
-    <div className={`sidenav ${collapsed ? 'collapsed' : ''}`}>
+    <div className={`sidenav ${collapsed ? 'collapsed' : ''}`} style={{ backgroundColor: sidebarColor }}>
       <div className="top">
         <div className="brand-logo">
           <div className="logo-container">
@@ -104,11 +107,10 @@ const Sidenav = ({ collapsed, toggleSidebar }) => {
             </Link>
           </div>
         )}
-        {/* clients */}
         <Link to="/clients" className="nav-item">
           <FontAwesomeIcon icon={faUserCircle} className="nav-icon" />
           <span className="nav-label">Clients</span>
-          </Link>
+        </Link>
         <Link to="/attendance" className="nav-item">
           <FontAwesomeIcon icon={faCalendar} className="nav-icon" />
           <span className="nav-label">Attendance</span>
