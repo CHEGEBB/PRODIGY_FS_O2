@@ -104,7 +104,7 @@ const AddEmployee = () => {
                     <FontAwesomeIcon icon={faIdCard} />
                   </div>
                   <input type="text" id="employeeId" required />
-                  <label htmlFor="employeeId">Employee ID*</label>
+                  <label htmlFor="employeeId">Employee ID</label>
                 </div>
                 <div className="form-group">
                   {/* salary */}
@@ -122,8 +122,11 @@ const AddEmployee = () => {
                     <FontAwesomeIcon icon={faAddressBook} />
                   </div>
                   <textarea id="address"  required></textarea>
-                  <label htmlFor="address" className="mt-4 address">Address*</label>
+                  <label htmlFor="address">Address</label>
                 </div>
+              </div>
+              <div className="group">
+                <button type="submit">Submit</button>
               </div>
         </form>
       </div>

@@ -35,8 +35,26 @@ $font-ropa-sans: 'Ropa Sans', sans-serif;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     width: 97%;
+    h2{
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+      font-size: 16px;
+      font-family: $font-rubik;
+      font-weight: 700;
+    }
 .group{
 @include group-fields;
+
+button{
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
   .form-group {
     position: relative;
@@ -56,6 +74,7 @@ $font-ropa-sans: 'Ropa Sans', sans-serif;
       border-radius: 4px;
       padding: 12px 12px 12px 40px;
       font-size: 16px;
+      font-family: $font-outfit;
       width: 430px;
       background: transparent;
       position: relative;
@@ -71,9 +90,10 @@ $font-ropa-sans: 'Ropa Sans', sans-serif;
       &:valid + label {
         top: -8px;
         left: 40px; 
-        font-size: 12px;
+        font-size: 13px;
         color: #333;
-        background: #f4f4f4;
+        background: #fff;
+        font-family: $font-jost;
         padding: 0 4px;
         z-index: 2;
       }
@@ -88,6 +108,7 @@ $font-ropa-sans: 'Ropa Sans', sans-serif;
       pointer-events: none;
       transition: 0.2s ease all;
       background: transparent;
+      font-family: $font-poppins;
     }
    
   }
