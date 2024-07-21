@@ -1,0 +1,216 @@
+.edit-employees-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+  
+    .main-content {
+        padding: 2rem;
+        max-width: 1920px;
+        margin: 0 auto;
+
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #333;
+            font-size: 2.5rem;
+        }
+
+        .employee-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            justify-content: center;
+
+            .employee-card {
+                background-color: #fff;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+
+                &:hover {
+                    transform: translateY(-5px);
+                }
+
+                .card-header {
+                    height: 150px;
+                    background: linear-gradient(45deg, #3498db, #8e44ad);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 1rem;
+
+                    .employee-image {
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                        border: 3px solid #fff;
+                    }
+                }
+
+                .card-body {
+                    padding: 1rem;
+                    text-align: center;
+
+                    h3 {
+                        margin-bottom: 1rem;
+                        color: #333;
+                        font-size: 1.2rem;
+                    }
+
+                    .action-buttons {
+                        display: flex;
+                        justify-content: space-around;
+
+                        button {
+                            padding: 0.5rem 1rem;
+                            border: none;
+                            border-radius: 5px;
+                            cursor: pointer;
+                            transition: background-color 0.3s ease;
+                            display: flex;
+                            align-items: center;
+                            gap: 0.5rem;
+                            font-size: 0.9rem;
+
+                            &.view-btn {
+                                background-color: #3498db;
+                                color: #fff;
+
+                                &:hover {
+                                    background-color: #2980b9;
+                                }
+                            }
+
+                            &.edit-btn {
+                                background-color: #2ecc71;
+                                color: #fff;
+
+                                &:hover {
+                                    background-color: #27ae60;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+
+        .modal {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 2rem;
+            width: 90%;
+            max-width: 500px;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+
+            .close-btn {
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                background: none;
+                border: none;
+                font-size: 1.5rem;
+                cursor: pointer;
+                color: #333;
+            }
+
+            h2 {
+                margin-bottom: 1.5rem;
+                text-align: center;
+                color: #333;
+                font-size: 1.8rem;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                .form-group {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+
+                    label {
+                        font-weight: bold;
+                        color: #333;
+                    }
+
+                    input {
+                        padding: 0.5rem;
+                        border: 1px solid #ccc;
+                        border-radius: 5px;
+                        font-size: 1rem;
+
+                        &[readonly] {
+                            background-color: #f0f0f0;
+                            cursor: not-allowed;
+                        }
+                    }
+                }
+
+                .submit-btn {
+                    background-color: #3498db;
+                    color: #fff;
+                    padding: 0.75rem;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    font-size: 1rem;
+                    transition: background-color 0.3s ease;
+
+                    &:hover {
+                        background-color: #2980b9;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1920px) {
+    .edit-employees-container {
+        .main-content {
+            .employee-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, calc(33.333% - 2rem)));
+            }
+        }
+    }
+}
+
+@media (max-width: 1279px) {
+    .edit-employees-container {
+        .main-content {
+            .employee-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .edit-employees-container {
+        .main-content {
+            .employee-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}

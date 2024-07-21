@@ -47,13 +47,20 @@ $font-ropa-sans: 'Ropa Sans', sans-serif;
 @include group-fields;
 
 button{
-  background-color: #333;
-  color: #fff;
+  background-color: #00E5FF;
+  color: #555;
   border: none;
   padding: 10px 20px;
-  border-radius: 4px;
+  border-radius: 12px;
+  width: 400px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  &:hover{
+    background-color: #4682B4;
+    transform: scale(1.1);
+    animation: transform translate 0.3s;
+    color: #fff;
+  }
 }
 
   .form-group {
