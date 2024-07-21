@@ -9,10 +9,8 @@ import Employees from './pages/Employees';
 import Clients from './pages/Clients';
 import Settings from './pages/Settings';
 import Projects from './pages/Projects';
-import AddProject from './pages/AddProjects';
 import AddEmployee from './pages/AddEmployees';
 import EditEmployee from './pages/EditEmployees';
-import EditProject from './pages/EditProjects';
 import Attendance from './pages/Attendance';
 import LeaveManagement from './pages/Leave';
 import { Navigate } from 'react-router-dom';
@@ -86,22 +84,6 @@ const App = () => {
                 element={
                   <ProtectedRoute isAuthenticated={isAuthenticated}>
                   <Projects />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/projects/add"
-                element={
-                  <ProtectedRoute isAuthenticated={isAuthenticated}>
-                    <AddProject />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/projects/edit"
-                element={
-                  <ProtectedRoute isAuthenticated={isAuthenticated}>
-                    <EditProject />
                   </ProtectedRoute>
                 }
               />

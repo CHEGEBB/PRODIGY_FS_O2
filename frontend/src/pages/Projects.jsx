@@ -82,7 +82,7 @@ const Projects = () => {
                 <h3>Team Members:</h3>
                 <div className="team-members-grid">
                     {project.teamMembers.map((member, idx) => (
-                        <div key={idx} className="team-member">
+                        <div key={member.name} className="team-member">
                             <img src={member.avatar} alt={member.name} />
                             <p>{member.name}</p>
                         </div>
@@ -112,9 +112,9 @@ const Projects = () => {
                     Our Tech Projects
                 </motion.h1>
                 <div className="projects-grid">
-                    {projects.map((project, index) => (
+                    {projects.map((project) => (
                         <motion.div 
-                            key={index} 
+                            key={project.id}  // Use a unique identifier for the key
                             className="project-card"
                             variants={cardVariants}
                         >
@@ -127,9 +127,9 @@ const Projects = () => {
                                 <div className="team-members">
                                     <h3>Team Members:</h3>
                                     <ul>
-                                        {project.teamMembers.map((member, idx) => (
+                                        {project.teamMembers.map((member) => (
                                             <motion.li 
-                                                key={idx}
+                                                key={member.name}  // Use a unique identifier for the key
                                                 whileHover={{ 
                                                     scale: 1.1, 
                                                     color: '#ff6b6b',

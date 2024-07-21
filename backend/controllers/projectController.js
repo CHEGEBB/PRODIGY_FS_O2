@@ -1,5 +1,5 @@
 // projectController.js
-const Project = require('../models/Project'); // Assuming you've defined your model in a separate file
+const Project = require('../models/Project'); 
 
 // Get all projects
 exports.getAllProjects = async (req, res) => {
