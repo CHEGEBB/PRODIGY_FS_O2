@@ -2,16 +2,36 @@
   @mixin group-fields{
     display: flex;
     flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    height: 150px;
+    
+    
+    & > * {
+      width: 100%;
+    }
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
+ 
+  .add-employee-container{
+    background-color:aliceblue;
+    min-height: 120vh;
+    width: 100%;
   form{
     display: flex;
-    background-color:aliceblue;
+    background-color:#fff;
     margin: 20px auto;
     min-height: 100vh;
-    border-radius: 15px;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 97%;
 .group{
-background-color: aqua;
+@include group-fields;
 
   .form-group {
     position: relative;
@@ -28,9 +48,9 @@ background-color: aqua;
     input, select {
       border: 1px solid #ccc;
       border-radius: 4px;
-      padding: 12px 12px 12px 40px; /* Padding to accommodate the icon */
+      padding: 12px 12px 12px 40px;
       font-size: 16px;
-      width: 200px;
+      width: 430px;
       background: transparent;
       position: relative;
       z-index: 1;
@@ -44,7 +64,7 @@ background-color: aqua;
       &:focus + label,
       &:valid + label {
         top: -8px;
-        left: 40px; /* Adjust position to clear the icon */
+        left: 40px; 
         font-size: 12px;
         color: #333;
         background: #f4f4f4;
@@ -56,7 +76,7 @@ background-color: aqua;
     label {
       position: absolute;
       top: 12px;
-      left: 40px; /* Adjust position to clear the icon */
+      left: 40px;
       font-size: 16px;
       color: #999;
       pointer-events: none;
@@ -65,4 +85,6 @@ background-color: aqua;
     }
   }
 }
+}
+
 }

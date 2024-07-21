@@ -3,6 +3,7 @@ import {
   faCalendarDay,
   faComputer,
   faEnvelope,
+  faIdCard,
   faPhone,
   faTransgender,
   faUserAlt
@@ -20,7 +21,6 @@ const AddEmployee = () => {
         {/* form to add employees */}
 
         <form className="add-employee">
-          <div className="names">
             <div className="group">
               <div className="form-group">
                 <div className="user-icon">
@@ -37,8 +37,6 @@ const AddEmployee = () => {
                 <label htmlFor="lastName">Last Name*</label>
               </div>
             </div>
-          </div>
-          <div className="dep">
             <div className="group">
               <div className="form-group">
                 {/* designation */}
@@ -57,8 +55,6 @@ const AddEmployee = () => {
                 <label htmlFor="department">Department*</label>
               </div>
             </div>
-          </div>
-          <div className="details">
             <div className="group">
               <div className="form-group">
                 <div className="user-icon">
@@ -75,9 +71,7 @@ const AddEmployee = () => {
                 <input type="tel" id="mobile" required />
                 <label htmlFor="mobile">Mobile Number*</label>
               </div>
-            </div>
-          </div>
-          <div className="personal-info">
+            </div><div className="personal-info">
             <div className="group">
               <div className="form-group">
                 {/* gender */}
@@ -99,8 +93,22 @@ const AddEmployee = () => {
                 </div>
                 <input type="date" id="dob" required />
               </div>
-            </div>
-          </div>
+              </div>
+              <div className="group">
+                <div className="form-group">
+                  {/* employee id */}
+                  <div className="user-icon">
+                    <FontAwesomeIcon icon={faIdCard} />
+                  </div>
+                  <input type="text" id="employeeId" required />
+                  <label htmlFor="employeeId">Employee ID*</label>
+                </div>
+                <div className="form-group">
+                  {/* salary */}
+                  
+                </div>
+              </div>
+              </div>
         </form>
       </div>
     </div>
