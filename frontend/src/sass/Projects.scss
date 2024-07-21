@@ -1,141 +1,135 @@
+$primary-color: #3498db;
+$secondary-color: #2c3e50;
+$text-color: #333;
+$card-bg-color: #fff;
+$progress-bg-color: #e0e0e0;
+$progress-color: #27ae60;
+$progress-text-color: #fff;
+
 .projects-container {
-    width: 100%;
-    min-height: 100vh;
-    background-color: #f5f5f5;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 2rem;
+    margin-left: 50px;
+    
+    @media (max-width: 1280px) {
+        padding: 1rem;
+    }
+}
 
-    .header-cont {
-        // Add any specific styling for the header container if needed
+.main-content {
+    h1 {
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 2rem;
+        color: $primary-color;
+    }
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 4rem;
+}
+
+.project-card {
+    background-color: $card-bg-color;
+    border-radius: 10px;
+    width: 400px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
     }
 
-    .main-content {
-        padding: 2rem;
-        max-width: 1920px;
-        margin: 0 auto;
+    .project-image {
+        height: 300px;
+        overflow: hidden;
 
-        h1 {
-            text-align: center;
-            margin-bottom: 2rem;
-            color: #333;
-            font-size: 2.5rem;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .project-details {
+        padding: 1.5rem;
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: $secondary-color;
         }
 
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            justify-content: center;
-
-            .project-card {
-                background-color: #fff;
-                border-radius: 10px;
-                overflow: hidden;
-                height: 500px;
-                width: 300px;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                transition: transform 0.3s ease;
-
-                &:hover {
-                    transform: translateY(-5px);
-                }
-
-                .project-image {
-                    height: 200px;
-                    overflow: hidden;
-
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                    }
-                }
-
-                .project-details {
-                    padding: 1.5rem;
-
-                    h2 {
-                        font-size: 1.5rem;
-                        color: #333;
-                        margin-bottom: 0.5rem;
-                    }
-
-                    p {
-                        font-size: 0.9rem;
-                        color: #666;
-                        margin-bottom: 1rem;
-                    }
-
-                    .team-members {
-                        margin-bottom: 1rem;
-
-                        h3 {
-                            font-size: 1rem;
-                            color: #333;
-                            margin-bottom: 0.5rem;
-                        }
-
-                        ul {
-                            list-style-type: none;
-                            padding: 0;
-
-                            li {
-                                font-size: 0.9rem;
-                                color: #666;
-                                margin-bottom: 0.25rem;
-                            }
-                        }
-                    }
-
-                    .progress-bar-container {
-                        background-color: #e0e0e0;
-                        border-radius: 10px;
-                        height: 20px;
-                        overflow: hidden;
-
-                        .progress-bar {
-                            height: 100%;
-                            background-color: #4caf50;
-                            border-radius: 10px;
-                            text-align: center;
-                            color: white;
-                            font-size: 0.8rem;
-                            line-height: 20px;
-                            transition: width 1s ease-in-out;
-                            animation: forwards 3s ease;
-                        }
-                    }
-                }
-            }
+        p {
+            font-size: 1rem;
+            color: $text-color;
+            margin-bottom: 1rem;
         }
     }
 }
 
-// Media queries for responsiveness
-@media (max-width: 1600px) {
-    .projects-container {
-        .main-content {
-            .projects-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
+.team-members {
+    margin-bottom: 1rem;
+
+    h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        color: $secondary-color;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+
+        li {
+            font-size: 0.9rem;
+            color: $text-color;
+            margin-bottom: 0.25rem;
+            cursor: pointer;
         }
     }
 }
 
-@media (max-width: 1200px) {
-    .projects-container {
-        .main-content {
-            .projects-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
+.progress-bar-container {
+    background-color: $progress-bg-color;
+    border-radius: 10px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: $progress-color;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 0.5rem;
+    border-radius: 10px;
+}
+
+.progress-text {
+    color: $progress-text-color;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+@media (max-width: 1280px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 768px) {
-    .projects-container {
-        .main-content {
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+    .projects-grid {
+        grid-template-columns: 1fr;
     }
 }
