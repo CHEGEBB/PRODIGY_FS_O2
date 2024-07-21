@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;700&display=swap');
+
+// Variables
+$primary-color: #3498db;
+$secondary-color: #2c3e50;
+$background-color: #f4f4f4;
+$text-color: #333;
+$card-bg-color: #fff;
+$font-primary: 'Poppins', sans-serif;
+$font-secondary: 'Roboto', sans-serif;
+
+// Mixins
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin card-shadow {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+// Global Styles
+body {
+    font-family: $font-primary;
+    background-color: $background-color;
+    color: $text-color;
+}
+
+.clients-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.clients-main {
+    h1 {
+        font-size: 2.5rem;
+        color: $primary-color;
+        text-align: center;
+        margin-bottom: 2rem;
+        font-weight: 600;
+
+        svg {
+            margin-right: 0.5rem;
+        }
+    }
+}
+
+.clients-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.client-card {
+    background-color: $card-bg-color;
+    border-radius: 10px;
+    padding: 1.5rem;
+    @include card-shadow;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+
+    .client-logo {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        color: $secondary-color;
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+        color: $text-color;
+        margin-bottom: 0.5rem;
+
+        svg {
+            margin-right: 0.5rem;
+            color: $primary-color;
+        }
+    }
+}
+
+.client-details-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    @include flex-center;
+    z-index: 1000;
+}
+
+.client-details {
+    background-color: $card-bg-color;
+    border-radius: 10px;
+    padding: 2rem;
+    max-width: 600px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    @include card-shadow;
+
+    .client-logo {
+        width: 150px;
+        height: 150px;
+        object-fit: contain;
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        color: $secondary-color;
+        margin-bottom: 0.5rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        color: $primary-color;
+        margin: 1.5rem 0 1rem;
+    }
+
+    p {
+        font-size: 1rem;
+        color: $text-color;
+        margin-bottom: 0.5rem;
+
+        svg {
+            margin-right: 0.5rem;
+            color: $primary-color;
+        }
+    }
+
+    .project-list {
+        list-style-type: none;
+        padding: 0;
+
+        li {
+            background-color: $background-color;
+            border-radius: 5px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+
+            strong {
+                font-size: 1.2rem;
+                color: $secondary-color;
+            }
+
+            p {
+                margin: 0.5rem 0;
+            }
+        }
+    }
+
+    .contact-person {
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+
+        img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+
+    button {
+        background-color: $primary-color;
+        color: white;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 1.5rem;
+
+        &:hover {
+            background-color: darken($primary-color, 10%);
+        }
+    }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+    .clients-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .client-details {
+        padding: 1.5rem;
+    }
+}

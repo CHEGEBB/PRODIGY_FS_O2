@@ -16,8 +16,6 @@ import {
   faUserPlus,
   faUserEdit,
   faProjectDiagram,
-  faFolderPlus,
-  faEdit,
   faCog
 } from '@fortawesome/free-solid-svg-icons';
 import '../sass/Sidenav.scss';
@@ -103,14 +101,6 @@ const Sidenav = ({ collapsed, toggleSidebar }) => {
             <Link to="/projects" className="submenu-item">
               <FontAwesomeIcon icon={faProjectDiagram} className="submenu-icon" />
               <span>All Projects</span>
-            </Link>
-            <Link to="/projects/add" className="submenu-item">
-              <FontAwesomeIcon icon={faFolderPlus} className="submenu-icon" />
-              <span>Add Project</span>
-            </Link>
-            <Link to="/projects/edit" className="submenu-item">
-              <FontAwesomeIcon icon={faEdit} className="submenu-icon" />
-              <span>Edit Project</span>
             </Link>
           </div>
         )}
