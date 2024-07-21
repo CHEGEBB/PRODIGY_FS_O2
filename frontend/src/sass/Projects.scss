@@ -29,6 +29,8 @@
                 background-color: #fff;
                 border-radius: 10px;
                 overflow: hidden;
+                height: 500px;
+                width: 300px;
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
                 transition: transform 0.3s ease;
 
@@ -98,6 +100,7 @@
                             font-size: 0.8rem;
                             line-height: 20px;
                             transition: width 1s ease-in-out;
+                            animation: forwards 3s ease;
                         }
                     }
                 }

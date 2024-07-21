@@ -4,7 +4,7 @@ const projects = [
       id: 1,
       name: "AI-Driven Customer Service Platform",
       description: "An advanced AI system that handles customer queries and complaints, reducing response times and improving satisfaction rates.",
-      image: "https://picsum.photos/id/20/200/300?grayscale&blur=2",
+      image: "https://picsum.photos/200",
       teamMembers: ["John Doe", "Jane Smith", "Robert Johnson"],
       progress: 75
     },
@@ -12,7 +12,7 @@ const projects = [
       id: 2,
       name: "Blockchain-Based Supply Chain Management",
       description: "A decentralized system for tracking products from manufacture to delivery, ensuring transparency and reducing fraud.",
-      image: "https://picsum.photos/id/70/200/300?grayscale&blur=2",
+      image: "https://picsum.photos/id/20/200",
       teamMembers: ["Alice Williams", "Bob Brown", "Charlie Davis"],
       progress: 60
     },
@@ -20,7 +20,7 @@ const projects = [
       id: 3,
       name: "Virtual Reality Training Simulator",
       description: "A VR platform for training employees in high-risk environments without exposing them to actual danger.",
-      image: "https://example.com/images/vr-training.jpg",
+      image: "https://picsum.photos/id/102/200",
       teamMembers: ["Eva Green", "Frank White", "Grace Lee"],
       progress: 85
     },
@@ -28,7 +28,7 @@ const projects = [
       id: 4,
       name: "IoT-Enabled Smart City Infrastructure",
       description: "A network of IoT devices to manage traffic flow, energy usage, and waste management in urban areas.",
-      image: "https://example.com/images/iot-smart-city.jpg",
+      image: "https://random.imagecdn.app/500/150",
       teamMembers: ["Henry Ford", "Irene Adler", "Jack Robinson"],
       progress: 40
     },
