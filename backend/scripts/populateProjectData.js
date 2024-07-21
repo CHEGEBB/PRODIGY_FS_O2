@@ -36,7 +36,7 @@ const projects = [
       id: 5,
       name: "Quantum Computing Cryptography System",
       description: "A cutting-edge encryption system leveraging quantum computing to provide unbreakable security for sensitive data.",
-      image: "https://example.com/images/quantum-cryptography.jpg",
+      image: "https://random-image-pepebigotes.vercel.app/api/random-image",
       teamMembers: ["Karen Hill", "Liam Neeson", "Mia Wallace"],
       progress: 30
     },
@@ -44,7 +44,7 @@ const projects = [
       id: 6,
       name: "Autonomous Drone Delivery Network",
       description: "A fleet of AI-controlled drones for fast and efficient package delivery in urban and rural areas.",
-      image: "https://example.com/images/drone-delivery.jpg",
+      image: "https://cdn2.thecatapi.com/images/1be.jpg",
       teamMembers: ["Neil Armstrong", "Olivia Pope", "Peter Parker"],
       progress: 55
     },
