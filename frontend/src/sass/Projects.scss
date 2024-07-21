@@ -101,9 +101,10 @@ $progress-text-color: #fff;
 
 .progress-bar-container {
     background-color: $progress-bg-color;
-    border-radius: 10px;
-    height: 20px;
+    // border-radius: 5px;
+    height: 15px;
     overflow: hidden;
+    box-shadow:  2px 2px 2px rgba(0, 0, 0,  0.3);
 }
 
 .progress-bar {
@@ -113,7 +114,7 @@ $progress-text-color: #fff;
     align-items: center;
     justify-content: flex-end;
     padding-right: 0.5rem;
-    border-radius: 10px;
+    // border-radius: 10px;
 }
 
 .progress-text {

@@ -60,7 +60,7 @@ const projects = [
       id: 8,
       name: "Predictive Maintenance AI for Manufacturing",
       description: "An AI system that predicts equipment failures in manufacturing plants, reducing downtime and maintenance costs.",
-      image: "https://picsum.photos/id/544/87/300",
+      image: "https://picsum.photos/id/74/650/300",
       teamMembers: ["Tony Stark", "Bruce Banner", "Natasha Romanoff"],
       progress: 80
     },
@@ -84,7 +84,7 @@ const projects = [
       id: 11,
       name: "Robotic Process Automation for Finance",
       description: "An RPA system to automate repetitive financial tasks, improving accuracy and reducing costs.",
-      image: "https://picsum.photos/id/83/600/200",
+      image: "https://picsum.photos/id/223/600/400",
       teamMembers: ["Adam Smith", "Betty Cooper", "Chuck Bass"],
       progress: 65
     },
@@ -92,7 +92,7 @@ const projects = [
       id: 12,
       name: "Machine Learning Credit Scoring System",
       description: "An advanced ML model for more accurate and fair credit scoring, considering a wider range of factors.",
-      image: "https://picsum.photos/id/124/600/200",
+      image: "https://picsum.photos/id/304/600/400",
       teamMembers: ["Dana Scully", "Fox Mulder", "Walter Skinner"],
       progress: 70
     }
