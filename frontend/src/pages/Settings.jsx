@@ -11,7 +11,6 @@ const SettingsPage = () => {
   const [showSidebarPicker, setShowSidebarPicker] = useState(false);
   const [adminProfile, setAdminProfile] = useState(null);
 
-  // Simulate fetching admin profile
   React.useEffect(() => {
     fetchAdminProfile();
   }, []);

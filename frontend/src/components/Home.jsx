@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import "../sass/Home.scss";
 import Header from '../components/Header';
 import Countup from 'react-countup';
@@ -16,6 +16,7 @@ import GraphicMember3 from "../images/member8.jpeg";
 import GraphicMember4 from "../images/member14.png";
 import GraphicMember5 from "../images/member13.jpg";
 import GraphicMember6 from "../images/member7.jpeg";
+import { ThemeContext } from '../context/ThemeContext'; // Adjust the path as needed
 
 const FactCard = ({ title, end, prefix, image }) => (
   <div className={`total-${title.toLowerCase()}`}>
@@ -30,6 +31,8 @@ const FactCard = ({ title, end, prefix, image }) => (
 );
 
 const HomePage = () => {
+  const { theme } = useContext(ThemeContext); // Get the theme from context
+
   const facts = [
     { title: 'Employees', end: 1000, image: Employees },
     { title: 'Expenses', end: 500000, prefix: '$', image: Expenses },
@@ -47,7 +50,6 @@ const HomePage = () => {
     { image: GraphicMember6, name: 'Emma Thompson', designation: 'Marketing Manager', performance: 'average' }
   ];
 
-  // Data for today's activities
   const activities = [
     { 
       title: 'Employee Onboarding', 
@@ -62,9 +64,7 @@ const HomePage = () => {
       description: 'Organize a training session on new software tools and techniques to enhance team skills and productivity.' 
     }
   ];
-  
 
-  // Data for to-do list items
   const todoList = [
     { id: 'task1', task: 'Hire a new designer' },
     { id: 'task2', task: 'Update job descriptions' },
@@ -73,9 +73,9 @@ const HomePage = () => {
     { id: 'task5', task: 'Track employee certifications' },
     { id: 'task6', task: 'Prepare performance review forms' }
   ];
-  
+
   return (
-    <div className="home-container">
+    <div className={`home-container ${theme}`}>
       <div className="header-home">
         <Header />
       </div>

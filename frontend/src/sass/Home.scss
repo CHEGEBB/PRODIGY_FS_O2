@@ -6,6 +6,7 @@ $font-open-sans: 'Open Sans', sans-serif;
 $font-jost: 'Jost', sans-serif;
 $font-outfit: 'Outfit', sans-serif;
 $font-ropa-sans: 'Ropa Sans', sans-serif;
+
 @mixin fact-card {
   width: 190px;
   height: 120px;
@@ -72,8 +73,7 @@ $font-ropa-sans: 'Ropa Sans', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-  background-color: aliceblue;
+  font-family: $font-poppins;
 
   .facts {
     display: flex;
@@ -81,7 +81,6 @@ $font-ropa-sans: 'Ropa Sans', sans-serif;
     gap: 20px;
     padding: 20px;
     margin-top: 50px;
-  
 
     .total-employees {
       @include fact-card;
@@ -113,18 +112,20 @@ $font-ropa-sans: 'Ropa Sans', sans-serif;
       color: white;
     }
   }
-  .statistics-graphs{
-    .development-stats{
+
+  .statistics-graphs {
+    .development-stats {
       display: flex;
       flex-direction: row;
       gap: 10px;
     }
   }
+
   .top-performers {
     padding: 20px;
     max-width: 1200px; 
     margin: 0 auto;
-  
+
     h2 {
       text-align: center;
       margin-bottom: 20px;
@@ -132,13 +133,13 @@ $font-ropa-sans: 'Ropa Sans', sans-serif;
       font-weight: 700;
       font-size: 26px;
     }
-  
+
     .top-performers-list {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
       justify-content: center;
-      
+
       .top-performer {
         display: flex;
         align-items: center;
@@ -151,12 +152,12 @@ $font-ropa-sans: 'Ropa Sans', sans-serif;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         width: calc(33.333% - 20px);
         box-sizing: border-box;
-  
+
         &:hover {
           transform: translateY(-5px);
           box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
-  
+
         .performer-image {
           img {
             width: 80px;
@@ -167,19 +168,19 @@ $font-ropa-sans: 'Ropa Sans', sans-serif;
             transition: border-color 0.3s ease;
           }
         }
-  
+
         .performer-details {
           h3 {
             margin: 0;
             font-size: 1.2rem;
             font-family: $font-outfit;
           }
-  
+
           p {
             margin: 5px 0;
             color:#666;
           }
-  
+
           .performance {
             padding: 5px 10px;
             border-radius: 20px;
@@ -189,19 +190,19 @@ $font-ropa-sans: 'Ropa Sans', sans-serif;
             display: inline-block;
             background-color: #ddd;
             transition: background-color 0.3s ease;
-  
+
             &.performance-excellent {
               background-color: #00E5FF; 
             }
-  
+
             &.performance-good {
               background-color: #FF1493; 
             }
-  
+
             &.performance-average {
               background-color: #ff9800; 
             }
-  
+
             &.performance-poor {
               background-color: #f44336; // Red
             }
@@ -210,34 +211,35 @@ $font-ropa-sans: 'Ropa Sans', sans-serif;
       }
     }
   }
+
   .now {
     display: flex;
     gap: 20px;
     margin-left: 20px;
-  
+
     .today-activities {
       flex: 1;
       background: #f9f9f9;
       padding: 20px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-      
+
       h2 {
         margin-bottom: 20px;
         color: #333;
         font-family: $font-poppins;
         font-weight: 700;
       }
-      
+
       .timeline {
         position: relative;
         padding-left: 30px;
-        
+
         .timeline-item {
           position: relative;
           margin-bottom: 20px;
           padding-left: 20px;
           margin-left: -30px;
-          
+
           .timeline-marker {
             position: absolute;
             left: -5px;
@@ -247,20 +249,20 @@ $font-ropa-sans: 'Ropa Sans', sans-serif;
             background-color: #007bff;
             border: 2px solid #fff;
           }
-          
+
           .timeline-content {
             padding: 10px;
             background: #fff;
             border-radius: 6px;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            
+
             h3 {
               margin: 0 0 5px;
               color: #333;
               font-family: $font-rubik;
               font-weight: 600;
             }
-            
+
             p {
               margin: 0;
               color: #666;
@@ -268,7 +270,7 @@ $font-ropa-sans: 'Ropa Sans', sans-serif;
             }
           }
         }
-        
+
         &:before {
           content: '';
           position: absolute;
@@ -278,98 +280,89 @@ $font-ropa-sans: 'Ropa Sans', sans-serif;
           height: 100%;
           background: #ddd;
         }
-        
+
         .timeline-item:nth-child(odd) .timeline-marker {
           background-color: #28a745;
         }
-        
+
         .timeline-item:nth-child(even) .timeline-marker {
           background-color: #dc3545;
         }
       }
     }
-    
+
     .todo-list {
       flex: 1;
       background: #fff;
       padding: 20px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  
+
       h2 {
         margin-bottom: 20px;
         color: #333;
-        font-family: $font-rubik;
+        font-family: $font-poppins;
         font-weight: 700;
       }
-  
+
       ul {
-        list-style: none;
+        list-style-type: none;
         padding: 0;
-        
+        margin: 0;
+
         li {
           display: flex;
           align-items: center;
-          margin-bottom: 15px;
           padding: 10px;
-          border-radius: 6px;
-          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-          background-color: #f9f9f9;
-          transition: background-color 0.3s ease, box-shadow 0.3s ease;
-          
-          &:hover {
-            background-color: #00E5FF;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          }
-          
-          input[type="checkbox"] {
-            margin-right: 15px;
-            accent-color: #007bff;
-            background-color: #dc3545;
-            
-            &:checked + label {
-              text-decoration: line-through;
-              color:#FF1493;
+          border-bottom: 1px solid #ddd;
+          position: relative;
+
+          .checkbox {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+            border: 2px solid #007bff;
+            background: #fff;
+            cursor: pointer;
+
+            &:checked {
+              background: #007bff;
+              border-color: #007bff;
             }
           }
-          
-          label {
+
+          .task {
+            flex: 1;
+            font-family: $font-open-sans;
+            font-size: 1rem;
             color: #333;
-            font-family: $font-outfit;
           }
         }
       }
     }
   }
-  
 
-  @media (min-width: 1280px) {
-    width: calc(1280px - 250px);
-    margin: 0 auto;
-    min-height: 100vh;
-    .facts{
-      flex-direction: row;
-      gap: 20px;
+  @media (max-width: 768px) {
+    .home-container {
+      padding: 10px;
     }
 
-  }
+    .facts {
+      flex-direction: column;
+      gap: 10px;
 
-  @media (min-width: 1920px) {
-    width: calc(1920px - 250px);
-    margin: 0 auto;
-
-    .sidebar-collapsed & {
-      width: calc(100% - 60px);
+      .fact-card {
+        width: 100%;
+      }
     }
-  }
-}
 
-@keyframes countUp {
-  from {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
+    .top-performers-list {
+      flex-direction: column;
+      gap: 10px;
+    }
   }
 }
