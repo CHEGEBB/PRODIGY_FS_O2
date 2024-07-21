@@ -20,7 +20,7 @@ const projects = [
       id: 3,
       name: "Virtual Reality Training Simulator",
       description: "A VR platform for training employees in high-risk environments without exposing them to actual danger.",
-      image: "https://picsum.photos/id/10/600/300",
+      image: "https://picsum.photos/id/444/600/300",
       teamMembers: ["Eva Green", "Frank White", "Grace Lee"],
       progress: 85
     },
