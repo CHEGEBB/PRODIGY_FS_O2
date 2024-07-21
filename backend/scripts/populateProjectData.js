@@ -60,7 +60,7 @@ const projects = [
       id: 8,
       name: "Predictive Maintenance AI for Manufacturing",
       description: "An AI system that predicts equipment failures in manufacturing plants, reducing downtime and maintenance costs.",
-      image: "https://picsum.photos/id/544/600/300",
+      image: "https://picsum.photos/id/544/87/300",
       teamMembers: ["Tony Stark", "Bruce Banner", "Natasha Romanoff"],
       progress: 80
     },
