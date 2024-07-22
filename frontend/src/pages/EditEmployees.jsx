@@ -46,9 +46,10 @@ const EditEmployees = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.put(`http://localhost:5000/api/employees/${editedEmployee.id}`, editedEmployee);
-            setEmployees(employees.map(emp => emp.id === editedEmployee.id ? editedEmployee : emp));
+            const response = await axios.put(`http://localhost:5000/api/employees/${editedEmployee._id}`, editedEmployee);
+            setEmployees(employees.map(emp => emp._id === editedEmployee._id ? response.data : emp));
             setShowModal(false);
+            fetchEmployees(); // Refetch to ensure we have the latest data
         } catch (error) {
             console.error('Error updating employee:', error.message);
         }
@@ -63,7 +64,7 @@ const EditEmployees = () => {
                 <h1>Employee Directory</h1>
                 <div className="employee-grid">
                     {employees.map((employee) => (
-                        <div key={employee.id} className="employee-card">
+                        <div key={employee._id} className="employee-card">
                             <div className="card-header">
                                 <img src={employee.image} alt={employee.name} className="employee-image" />
                             </div>

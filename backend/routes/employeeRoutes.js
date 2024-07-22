@@ -4,6 +4,7 @@ const employeeController = require('../controllers/employeeController');
 
 router.get('/', employeeController.getAllEmployees);
 router.post('/', employeeController.createEmployee);
+router.put('/:id', employeeController.updateEmployee);
 
 // Add other routes as needed
 
