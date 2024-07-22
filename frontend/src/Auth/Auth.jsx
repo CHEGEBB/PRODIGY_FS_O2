@@ -22,7 +22,7 @@ const AuthenticationPages = ({ onLogin }) => {
   const handleSignIn = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+      const response = await axios.post('https://pulsehr-backend-01.onrender.com/api/auth/login', { email, password });
       localStorage.setItem('token', response.data.token);
       onLogin();
       navigate('/dashboard');
@@ -34,7 +34,7 @@ const AuthenticationPages = ({ onLogin }) => {
   const handleSignUp = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/auth/signup', { name, email, password });
+      await axios.post('https://pulsehr-backend-01.onrender.com/api/auth/signup', { name, email, password });
       alert('Sign up successful. Please log in.');
       toggleMode();
     } catch (error) {
