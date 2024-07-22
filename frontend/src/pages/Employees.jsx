@@ -11,7 +11,7 @@ const Employees = () => {
     // Fetch employee details from the backend
     const fetchEmployees = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/employees');
+            const response = await axios.get('https://pulsehr-backend-01.onrender.com/api/employees');
             setEmployees(response.data); // Store the fetched data in state
         } catch (error) {
             console.error('Error fetching employee details:', error.message);
