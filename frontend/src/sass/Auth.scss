@@ -118,10 +118,11 @@ input {
   width: 1000px;
   border: 2px solid $color-accent-teal;
   background-color: $bluish-white-1;
-  min-height: 700px;
+  min-height: 600px;
   overflow: hidden;
   border-radius: 12px;
   margin: 0 auto;
+  margin-top: 70px;
 }
 
 .forms-container {
