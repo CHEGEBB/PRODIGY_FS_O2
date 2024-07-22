@@ -15,7 +15,7 @@ const Header = () => {
     const [showSchedule, setShowSchedule] = useState(false);
 
     const notifications = [
-        { id: 1, type: 'success', message: 'Project XYZ completed successfully', icon: faCheckCircle },
+        { id: 1, type: 'success', message: ' completed successfully', icon: faCheckCircle },
         { id: 2, type: 'warning', message: 'Upcoming deadline for Project ABC', icon: faExclamationCircle },
         { id: 3, type: 'info', message: 'New team member joined', icon: faInfoCircle },
     ];
