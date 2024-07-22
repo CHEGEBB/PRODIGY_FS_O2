@@ -123,10 +123,10 @@ const Sidenav = ({ collapsed, toggleSidebar }) => {
           <FontAwesomeIcon icon={faCog} className="nav-icon" />
           <span className="nav-label">Settings</span>
         </Link>
-        <Link to="/" className="nav-item">
-          <FontAwesomeIcon icon={faChevronLeft} className="nav-icon" />
-          <span className="nav-label">Logout</span>
-        </Link>
+        <Link to="/" className="nav-item" onClick={() => window.location.reload()}>
+  <FontAwesomeIcon icon={faChevronLeft} className="nav-icon" />
+  <span className="nav-label">Logout</span>
+</Link>
       </nav>
       <div className="toggle-sidebar" onClick={toggleSidebar}>
         <FontAwesomeIcon icon={collapsed ? faChevronRight : faChevronLeft} />

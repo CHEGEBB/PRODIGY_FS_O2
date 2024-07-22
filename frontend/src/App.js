@@ -1,5 +1,5 @@
 import './App.scss';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { useState } from 'react';
 import HomePage from './components/Home';
 import NotFound from './components/404';
@@ -13,13 +13,12 @@ import AddEmployee from './pages/AddEmployees';
 import EditEmployee from './pages/EditEmployees';
 import Attendance from './pages/Attendance';
 import LeaveManagement from './pages/Leave';
-import { Navigate } from 'react-router-dom';
+
 const ProtectedRoute = ({ children, isAuthenticated }) => {
   if (!isAuthenticated) {
     return <Navigate to="/" replace />;
   }
   return children;
-
 };
 
 const App = () => {
@@ -38,8 +37,6 @@ const App = () => {
     <Router>
       <div className={`App ${collapsed ? 'sidebar-collapsed' : ''}`}>
         <div className="container-main-page">
-     
-
           {isAuthenticated && (
             <Sidenav collapsed={collapsed} toggleSidebar={toggleSidebar} />
           )}
@@ -83,7 +80,7 @@ const App = () => {
                 path="/projects"
                 element={
                   <ProtectedRoute isAuthenticated={isAuthenticated}>
-                  <Projects />
+                    <Projects />
                   </ProtectedRoute>
                 }
               />
@@ -94,7 +91,7 @@ const App = () => {
                     <Clients />
                   </ProtectedRoute>
                 }
-                />
+              />
               <Route
                 path="/attendance"
                 element={
