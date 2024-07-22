@@ -10,16 +10,30 @@ exports.getAllEmployees = async (req, res) => {
 };
 
 exports.createEmployee = async (req, res) => {
+  const {
+    name,
+    designation,
+    department,
+    mobile,
+    email,
+    salary,
+    joiningDate,
+    backstory,
+    gender,
+    image
+  } = req.body;
+
   const employee = new Employee({
-    image: `https://randomuser.me/api/portraits/${req.body.gender}/${req.body.imageId}.jpg`,
-    name: req.body.name,
-    designation: req.body.designation,
-    department: req.body.department,
-    mobile: req.body.mobile,
-    email: req.body.email,
-    salary: req.body.salary,
-    joiningDate: req.body.joiningDate,
-    backstory: req.body.backstory
+    name,
+    designation,
+    department,
+    mobile,
+    email,
+    salary,
+    joiningDate,
+    backstory,
+    gender,
+    image
   });
 
   try {
