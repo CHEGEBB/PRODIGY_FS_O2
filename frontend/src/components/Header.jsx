@@ -3,10 +3,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBell, faMessage, faCalendar, faHome, faSearch } from "@fortawesome/free-solid-svg-icons";
 import Admin from "../images/domnic-harris.png";
 import '../sass/Header.scss';
-import { ThemeContext } from '../context/ThemeContext'; // Adjust path as necessary
+import { ThemeContext } from '../context/ThemeContext';
 
 const Header = () => {
     const { headerColor, theme } = useContext(ThemeContext);
+    
 
     return (
         <div className={`header-container ${theme}`} style={{ backgroundColor: headerColor }}>

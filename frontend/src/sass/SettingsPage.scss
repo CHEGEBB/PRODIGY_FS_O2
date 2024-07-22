@@ -1,3 +1,9 @@
+$font-rubik: 'Rubik', sans-serif;
+$font-poppins: 'Poppins', sans-serif;
+$font-open-sans: 'Open Sans', sans-serif;
+$font-jost: 'Jost', sans-serif;
+$font-outfit: 'Outfit', sans-serif;
+$font-ropa-sans: 'Ropa Sans', sans-serif;
 :root {
     --background-color: #ffffff;
     --text-color: #000000;
@@ -15,7 +21,7 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    font-family: 'Arial', sans-serif;
+    font-family:$font-outfit;
   
     h1 {
       color: var(--text-primary);

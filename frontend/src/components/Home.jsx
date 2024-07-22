@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext,useState } from 'react';
 import "../sass/Home.scss";
 import Header from '../components/Header';
 import Countup from 'react-countup';
@@ -16,7 +16,7 @@ import GraphicMember3 from "../images/member8.jpeg";
 import GraphicMember4 from "../images/member14.png";
 import GraphicMember5 from "../images/member13.jpg";
 import GraphicMember6 from "../images/member7.jpeg";
-import { ThemeContext } from '../context/ThemeContext'; // Adjust the path as needed
+import { ThemeContext } from '../context/ThemeContext';
 
 const FactCard = ({ title, end, prefix, image }) => (
   <div className={`total-${title.toLowerCase()}`}>
@@ -31,8 +31,7 @@ const FactCard = ({ title, end, prefix, image }) => (
 );
 
 const HomePage = () => {
-  const { theme } = useContext(ThemeContext); // Get the theme from context
-
+  const { theme } = useContext(ThemeContext);
   const facts = [
     { title: 'Employees', end: 1000, image: Employees },
     { title: 'Expenses', end: 500000, prefix: '$', image: Expenses },
