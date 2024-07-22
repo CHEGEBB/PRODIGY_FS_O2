@@ -17,7 +17,7 @@ const Projects = () => {
 
     const fetchProjects = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/projects');
+            const response = await axios.get('https://pulsehr-backend-01.onrender.com/api/projects');
             const projectsWithAvatars = response.data.slice(0, 12).map(project => ({
                 ...project,
                 teamMembers: project.teamMembers.map(member => ({

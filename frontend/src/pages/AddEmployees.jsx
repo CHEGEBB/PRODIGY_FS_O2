@@ -15,7 +15,7 @@ import Header from "../components/Header";
 import "../sass/AddEmployee.scss";
 import axios from "axios";
 
-axios.defaults.baseURL = 'http://localhost:5000';
+axios.defaults.baseURL = 'https://pulsehr-backend-01.onrender.com';
 
 const AddEmployee = () => {
   const [formData, setFormData] = useState({
