@@ -11,6 +11,7 @@ const EditEmployees = () => {
     const [showModal, setShowModal] = useState(false);
     const [editedEmployee, setEditedEmployee] = useState({});
     const [modalMode, setModalMode] = useState('view');
+    const [successMessage, setSuccessMessage] = useState('');
 
     const fetchEmployees = async () => {
         try {
@@ -49,9 +50,13 @@ const EditEmployees = () => {
             const response = await axios.put(`http://localhost:5000/api/employees/${editedEmployee._id}`, editedEmployee);
             setEmployees(employees.map(emp => emp._id === editedEmployee._id ? response.data : emp));
             setShowModal(false);
+            setSuccessMessage('Employee details updated successfully!');
+            setTimeout(() => setSuccessMessage(''), 3000); // Clear message after 3 seconds
             fetchEmployees(); // Refetch to ensure we have the latest data
         } catch (error) {
             console.error('Error updating employee:', error.message);
+            setSuccessMessage('Error updating employee details.');
+            setTimeout(() => setSuccessMessage(''), 3000);
         }
     };
 
@@ -62,6 +67,11 @@ const EditEmployees = () => {
             </div>
             <div className="main-content">
                 <h1>Employee Directory</h1>
+                {successMessage && (
+                    <div className="success-message">
+                        {successMessage}
+                    </div>
+                )}
                 <div className="employee-grid">
                     {employees.map((employee) => (
                         <div key={employee._id} className="employee-card">

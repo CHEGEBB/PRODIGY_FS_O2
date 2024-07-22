@@ -5,7 +5,7 @@ const ThemeContext = createContext();
 const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState('light');
   const [headerColor, setHeaderColor] = useState('#F5F5F5');
-  const [sidebarColor, setSidebarColor] = useState('#6bb0ad');
+  const [sidebarColor, setSidebarColor] = useState('#1D686E');
 
   useEffect(() => {
     document.body.setAttribute('data-theme', theme);
