@@ -33,7 +33,7 @@ Welcome to **PulseHR**, an efficient and intuitive Employee Management System (E
 
 You can access the live application at the following link:
 
-[PulseHR Live](https://your-deployed-url.com)
+[PulseHR Live](https://pulsehr-il5p.onrender.com)
 
 ## Usage 👨‍💻
 
