@@ -15,7 +15,7 @@ const EditEmployees = () => {
 
     const fetchEmployees = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/employees');
+            const response = await axios.get('https://pulsehr-backend-01.onrender.com/api/employees');
             setEmployees(response.data);
         } catch (error) {
             console.error('Error fetching employee details:', error.message);
@@ -47,7 +47,7 @@ const EditEmployees = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.put(`http://localhost:5000/api/employees/${editedEmployee._id}`, editedEmployee);
+            const response = await axios.put(`https://pulsehr-backend-01.onrender.com/api/employees/${editedEmployee._id}`, editedEmployee);
             setEmployees(employees.map(emp => emp._id === editedEmployee._id ? response.data : emp));
             setShowModal(false);
             setSuccessMessage('Employee details updated successfully!');
