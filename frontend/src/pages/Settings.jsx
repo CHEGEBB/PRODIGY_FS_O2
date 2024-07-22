@@ -18,8 +18,8 @@ const SettingsPage = () => {
   const fetchAdminProfile = () => {
     setTimeout(() => {
       setAdminProfile({
-        name: 'John Doe',
-        email: 'john.doe@example.com',
+        name: 'Brian Smith',
+        email: 'smithb@pulsehr.com',
         avatar: 'https://randomuser.me/api/portraits/men/1.jpg',
         role: 'Super Admin'
       });

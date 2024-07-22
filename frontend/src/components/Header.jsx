@@ -4,7 +4,7 @@ import {
   faBell, faMessage, faCalendar, faHome, faSearch, 
   faCheckCircle, faExclamationCircle, faInfoCircle
 } from "@fortawesome/free-solid-svg-icons";
-import Admin from "../images/domnic-harris.png";
+import Admin from "../images/1.jpg";
 import '../sass/Header.scss';
 import { ThemeContext } from '../context/ThemeContext';
 
@@ -23,7 +23,7 @@ const Header = () => {
     const messages = [
         { id: 1, sender: 'John Doe', message: 'Hey, can we discuss the project?', time: '10:30 AM' },
         { id: 2, sender: 'Jane Smith', message: 'The client meeting is rescheduled', time: '11:45 AM' },
-        { id: 3, sender: 'Mike Johnson', message: 'I've sent you the updated files', time: '2:15 PM' },
+        { id: 3, sender: 'Mike Johnson', message: 'I have sent you the updated files', time: '2:15 PM' },
     ];
 
     const scheduleEvents = [

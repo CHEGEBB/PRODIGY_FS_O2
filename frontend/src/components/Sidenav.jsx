@@ -21,10 +21,10 @@ import {
   faUserCircle
 } from '@fortawesome/free-solid-svg-icons';
 import '../sass/Sidenav.scss';
-import DummyAdmin from "../images/domnic-harris.png";
+import DummyAdmin from "../images/1.jpg";
 import animationData from "../images/logo.json";
 import Lottie from 'lottie-react';
-import { ThemeContext } from '../context/ThemeContext'; // Ensure this path is correct
+import { ThemeContext } from '../context/ThemeContext'; 
 
 const Sidenav = ({ collapsed, toggleSidebar }) => {
   const [activeSubmenu, setActiveSubmenu] = useState(null);
