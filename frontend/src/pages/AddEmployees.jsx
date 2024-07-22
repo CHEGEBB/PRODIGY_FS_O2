@@ -5,7 +5,6 @@ import {
   faCalendarDay,
   faComputer,
   faEnvelope,
-  faIdCard,
   faMoneyBill,
   faPhone,
   faTransgender,
