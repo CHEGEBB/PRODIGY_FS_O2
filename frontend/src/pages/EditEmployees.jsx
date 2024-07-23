@@ -51,8 +51,8 @@ const EditEmployees = () => {
             setEmployees(employees.map(emp => emp._id === editedEmployee._id ? response.data : emp));
             setShowModal(false);
             setSuccessMessage('Employee details updated successfully!');
-            setTimeout(() => setSuccessMessage(''), 3000); // Clear message after 3 seconds
-            fetchEmployees(); // Refetch to ensure we have the latest data
+            setTimeout(() => setSuccessMessage(''), 3000);
+            fetchEmployees(); 
         } catch (error) {
             console.error('Error updating employee:', error.message);
             setSuccessMessage('Error updating employee details.');
