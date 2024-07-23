@@ -21,7 +21,7 @@ const AttendancePage = () => {
         name: `${user.name.first} ${user.name.last}`,
         email: user.email,
         picture: user.picture.medium,
-        present: Math.random() > 0.3, // 70% chance of being present
+        present: Math.random() > 0.3, 
         signInTime: user.present ? generateRandomTime() : null
       }));
       setEmployees(formattedEmployees);
@@ -31,7 +31,7 @@ const AttendancePage = () => {
   };
 
   const generateRandomTime = () => {
-    const hour = Math.floor(Math.random() * 3) + 8; // 8 AM to 10 AM
+    const hour = Math.floor(Math.random() * 3) + 8; 
     const minute = Math.floor(Math.random() * 60);
     return `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`;
   };
