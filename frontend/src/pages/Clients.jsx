@@ -14,6 +14,7 @@ const Clients = () => {
     }, []);
 
     const fetchClients = async () => {
+        // mock clients
         const mockClients = [
             {
                 id: 1,
