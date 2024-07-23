@@ -42,6 +42,7 @@ const LeaveManagement = () => {
             request.id === id ? { ...request, status: newStatus } : request
         ));
     };
+    
 
     const LeaveRequestCard = ({ request }) => (
         <motion.div 
@@ -62,6 +63,7 @@ const LeaveManagement = () => {
             )}
         </motion.div>
     );
+    // leave management div
 
     return (
         <div className="leave-management-container">
