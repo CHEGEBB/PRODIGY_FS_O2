@@ -114,7 +114,7 @@ const Projects = () => {
                 <div className="projects-grid">
                     {projects.map((project) => (
                         <motion.div 
-                            key={project.id}  // Use a unique identifier for the key
+                            key={project.id}  
                             className="project-card"
                             variants={cardVariants}
                         >
@@ -129,7 +129,7 @@ const Projects = () => {
                                     <ul>
                                         {project.teamMembers.map((member) => (
                                             <motion.li 
-                                                key={member.name}  // Use a unique identifier for the key
+                                                key={member.name}  
                                                 whileHover={{ 
                                                     scale: 1.1, 
                                                     color: '#ff6b6b',
