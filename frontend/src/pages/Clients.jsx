@@ -167,6 +167,7 @@ const Clients = () => {
                     ))}
                 </div>
             </main>
+            {/* animations */}
             <AnimatePresence>
                 {selectedClient && <ClientDetails client={selectedClient} />}
             </AnimatePresence>
