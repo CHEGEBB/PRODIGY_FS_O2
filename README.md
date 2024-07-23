@@ -4,7 +4,7 @@ Got it! Since the application is already deployed, I'll adjust the README to ref
 
 # PulseHR 🚀❤️
 ## 🚀🌐 Live Demo
-  <a href="https://pulsehr-il5p.onrender.com"><strong>➥ Live Demo</strong></a>
+  <a href="https://prodigy-fs-o2-bo602wska-chegebbs-projects.vercel.app/"><strong>➥ Live Demo</strong></a>
 
 
 
@@ -33,7 +33,7 @@ Welcome to **PulseHR**, an efficient and intuitive Employee Management System (E
 
 You can access the live application at the following link:
 
-[PulseHR Live](https://pulsehr-il5p.onrender.com)
+[PulseHR Live](https://prodigy-fs-o2-bo602wska-chegebbs-projects.vercel.app/)
 
 ## Usage 👨‍💻
 
