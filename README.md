@@ -73,7 +73,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 If you have any questions or suggestions, feel free to reach out:
 
 - **Brian Chege**
-- Email: [your-email@example.com](mailto:chegephil24@gmail.com)
+- Email: [chegephil24@gmail.com](mailto:chegephil24@gmail.com)
 - GitHub: [CHEGEBB](https://github.com/CHEGEBB)
 
 Thank you for using PulseHR! We hope it helps you manage your HR processes efficiently.
