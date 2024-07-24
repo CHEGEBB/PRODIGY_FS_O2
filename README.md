@@ -1,4 +1,4 @@
-Got it! Since the application is already deployed, I'll adjust the README to reflect that users don't need to install it locally and can access it directly. Here's the revised README:
+
 
 ---
 
